@@ -11,7 +11,7 @@
     <message>
         <location filename="../appearancepage.ui" line="59"/>
         <source>Preview</source>
-        <translation>Voorbeeld</translation>
+        <translation>Voorvertoning</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="69"/>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="71"/>
         <source>Create</source>
-        <translation>Creëren</translation>
+        <translation>Maken</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="72"/>
@@ -72,7 +72,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="73"/>
         <source>Create a Copy</source>
-        <translation>Kopie creëren</translation>
+        <translation>Kopie maken</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="74"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="236"/>
         <source>Unable to copy file</source>
-        <translation>Kopiëren van bestand niet mogelijk</translation>
+        <translation>Het bestand kan niet worden gekopieerd</translation>
     </message>
 </context>
 <context>
@@ -246,12 +246,12 @@
     <message>
         <location filename="../fontspage.ui" line="100"/>
         <source>Fixed width:</source>
-        <translation>Vastgezette breedte:</translation>
+        <translation>Vaste breedte:</translation>
     </message>
     <message>
         <location filename="../fontspage.ui" line="125"/>
         <source>Create  fonts.conf</source>
-        <translation>fonts.conf creëren</translation>
+        <translation>fonts.conf samenstellen</translation>
     </message>
     <message>
         <location filename="../fontspage.ui" line="132"/>
@@ -362,7 +362,7 @@
     <message>
         <location filename="../interfacepage.ui" line="229"/>
         <source>Toolbar button style:</source>
-        <translation>Werkbalkknop-stijl:</translation>
+        <translation>Werkbalkknopstijl:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="239"/>
@@ -372,12 +372,12 @@
     <message>
         <location filename="../interfacepage.ui" line="256"/>
         <source>Show shortcut underlines</source>
-        <translation>Snelkoppelingen onderstrepen</translation>
+        <translation>Sneltoetsacties onderstrepen</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="266"/>
         <source>Show shortcuts in context menus</source>
-        <translation>Sneltoetsen tonen in rechtermuisknopmenu&apos;s</translation>
+        <translation>Sneltoetsacties tonen in rechtermuisknopmenu&apos;s</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="61"/>
@@ -402,7 +402,7 @@
     <message>
         <location filename="../interfacepage.cpp" line="65"/>
         <source>Follow the application style</source>
-        <translation>Applicatiestijl volgen</translation>
+        <translation>Programmastijl volgen</translation>
     </message>
 </context>
 <context>
@@ -415,7 +415,7 @@
     <message>
         <location filename="../mainwindow.ui" line="45"/>
         <source>The application is not configured correctly.</source>
-        <translation>De applicatie is onjuist ingesteld.</translation>
+        <translation>Het programma is niet goed ingesteld.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="52"/>
@@ -430,7 +430,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="49"/>
         <source>Appearance</source>
-        <translation>Uiterlijk</translation>
+        <translation>Vormgeving</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="50"/>
@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>De omgevingsvariabel &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; is onjuist ingesteld (huidige waarde: &lt;b&gt;%1&lt;/b&gt; - vereiste waarde: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
+        <translation>De omgevingsvariabel &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; is niet goed ingesteld (huidige waarde: &lt;b&gt;%1&lt;/b&gt; - vereiste waarde: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="133"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
-        <translation>&lt;b&gt;libqt5ct-style.so&lt;/b&gt; kan niet worden gevonden.</translation>
+        <translation>&lt;b&gt;libqt5ct-style.so&lt;/b&gt; is niet aangetroffen.</translation>
     </message>
 </context>
 <context>
@@ -488,22 +488,22 @@
     <message>
         <location filename="../paletteeditdialog.ui" line="14"/>
         <source>Palette Editor</source>
-        <translation>Kleurenschema-bewerker</translation>
+        <translation>Kleurenschemabewerker</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="79"/>
         <source>Reset palette</source>
-        <translation>Standaardwaarden</translation>
+        <translation>Standaardwaarden terugzetten</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="29"/>
         <source>Build inactive palette</source>
-        <translation>Inactief kleurenschema bouwen</translation>
+        <translation>Inactief kleurenschema samenstellen</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="36"/>
         <source>Build disabled palette</source>
-        <translation>Uitgeschakeld kleurenschema bouwen</translation>
+        <translation>Uitgeschakeld kleurenschema samenstellen</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="49"/>
@@ -682,7 +682,7 @@
     <message>
         <location filename="../qsspage.ui" line="23"/>
         <source>Create</source>
-        <translation>Creëren</translation>
+        <translation>Maken</translation>
     </message>
     <message>
         <location filename="../qsspage.ui" line="66"/>
@@ -706,7 +706,7 @@
     <message>
         <location filename="../qsspage.cpp" line="52"/>
         <source>Create a Copy</source>
-        <translation>Kopie creëren</translation>
+        <translation>Kopie maken</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="92"/>
@@ -723,7 +723,7 @@
         <location filename="../qsspage.cpp" line="106"/>
         <location filename="../qsspage.cpp" line="251"/>
         <source>Enter Style Sheet Name</source>
-        <translation>Voer een naam in voor dit stijlblad</translation>
+        <translation>Geef dit stijlblad een naam</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="117"/>
@@ -768,7 +768,7 @@
     <message>
         <location filename="../qsspage.cpp" line="226"/>
         <source>Unable to rename file</source>
-        <translation>Het wijzigen van de bestandsnaam is mislukt</translation>
+        <translation>De bestandsnaam kan niet worden gewijzigd</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="253"/>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../qsspage.cpp" line="271"/>
         <source>Unable to copy file</source>
-        <translation>Kan bestand niet kopiëren</translation>
+        <translation>Het bestand kan niet worden gekopieerd</translation>
     </message>
 </context>
 </TS>
