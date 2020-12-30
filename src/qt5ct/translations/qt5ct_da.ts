@@ -135,7 +135,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="199"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
-        <translation>Er du sikker på, at du vil fjerne farveskema &quot;%1&quot;?</translation>
+        <translation>Er du sikker på, at du vil fjerne farveskemaet &quot;%1&quot;?</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="219"/>
@@ -179,7 +179,7 @@
     <message>
         <location filename="../fontconfigdialog.ui" line="67"/>
         <source>Font resolution:</source>
-        <translation>Skriftypeopløsning:</translation>
+        <translation>Opløsning for skrift:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="110"/>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../fontconfigdialog.ui" line="83"/>
         <source>Subpixel geometry:</source>
-        <translation>Underpixel geometri:</translation>
+        <translation>Geometri for underpixel:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="90"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../fontconfigdialog.ui" line="97"/>
         <source>Hinting style:</source>
-        <translation>Hintingstil:</translation>
+        <translation>Stil for hinting:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="42"/>
@@ -332,7 +332,7 @@
     <message>
         <location filename="../interfacepage.ui" line="175"/>
         <source>Enable gui effects</source>
-        <translation>Aktivér effekter til grafisk brugerflade</translation>
+        <translation>Aktivér brugerfladeeffekter</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="182"/>
@@ -367,12 +367,12 @@
     <message>
         <location filename="../interfacepage.ui" line="239"/>
         <source>Mouse wheel scroll lines:</source>
-        <translation>Linjer som musehjulet ruller:</translation>
+        <translation>Rullelinjer for musehjul:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="256"/>
         <source>Show shortcut underlines</source>
-        <translation>Vis understregning af genveje</translation>
+        <translation>Vis understregninger for genveje</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="266"/>
@@ -392,17 +392,17 @@
     <message>
         <location filename="../interfacepage.cpp" line="63"/>
         <source>The text appears beside the icon</source>
-        <translation>Tekst ved siden af ikonet</translation>
+        <translation>Teksten vises ved siden af ikonet</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="64"/>
         <source>The text appears under the icon</source>
-        <translation>Tekst under ikonet</translation>
+        <translation>Teksten vises under ikonet</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="65"/>
         <source>Follow the application style</source>
-        <translation>Følg programmets stil</translation>
+        <translation>Følg programstilen</translation>
     </message>
 </context>
 <context>
@@ -470,12 +470,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="122"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke sat (krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
+        <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke indstillet (krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="126"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke sat korrekt (nuværende værdi: &lt;b&gt;%1&lt;/b&gt;, krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
+        <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke indstillet korrekt (nuværende værdi: &lt;b&gt;%1&lt;/b&gt;, krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="133"/>
@@ -533,7 +533,7 @@
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Button background</source>
-        <translation>Knap baggrund</translation>
+        <translation>Baggrund for knap</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
@@ -568,7 +568,7 @@
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Button text</source>
-        <translation>Knap tekst</translation>
+        <translation>Tekst for knap</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
@@ -583,12 +583,12 @@
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Highlight</source>
-        <translation>Markeret</translation>
+        <translation>Fremhævning</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Highlighted text</source>
-        <translation>Markeret tekst</translation>
+        <translation>Fremhævet tekst</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
@@ -603,12 +603,12 @@
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Tooltip background</source>
-        <translation>Værktøjstip baggrund</translation>
+        <translation>Baggrund for værktøjstip</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Tooltip text</source>
-        <translation>Værktøjstip tekst</translation>
+        <translation>Tekst for værktøjstip</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
@@ -618,12 +618,12 @@
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Alternate background</source>
-        <translation>Alternativ baggrund</translation>
+        <translation>Skift baggrund</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="96"/>
         <source>Placeholder text</source>
-        <translation>Pladsholder tekst</translation>
+        <translation>Pladsholdertekst</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="109"/>
@@ -661,7 +661,7 @@
     <message>
         <location filename="../previewform.ui" line="84"/>
         <source>CheckBox</source>
-        <translation>Tjekboks</translation>
+        <translation>Afkrydsningsboks</translation>
     </message>
 </context>
 <context>
@@ -747,7 +747,7 @@
     <message>
         <location filename="../qsspage.cpp" line="152"/>
         <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
-        <translation>Er du sikker på, at du vil fjerne typografiark &quot;%1&quot;?</translation>
+        <translation>Er du sikker på, at du vil fjerne typografiarket &quot;%1&quot;?</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="208"/>
