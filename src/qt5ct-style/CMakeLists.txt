@@ -5,6 +5,7 @@ add_definitions(-DUSE_WIDGETS)
 set(app_SRCS
   plugin.cpp
   qt5ctproxystyle.cpp
+  ../qt5ct/qt5ct.cpp
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../)
