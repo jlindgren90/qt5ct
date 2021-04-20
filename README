@@ -13,11 +13,17 @@ Requirements:
 - qttools >= 5.4.0 (For build only)
 
 
-Installation:
+Installation using qmake:
 
 qmake PREFIX=<your installation path>
 make
 make install (under root)
+
+Installation using cmake:
+
+cmake -DCMAKE_INSTALL_PREFIX=<your installation path>
+make
+sudo make install
 
 Add line 'export QT_QPA_PLATFORMTHEME=qt5ct' to ~/.profile and re-login.
 Alternatively, create the file /etc/X11/Xsession.d/100-qt5ct with

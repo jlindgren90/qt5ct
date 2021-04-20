@@ -337,6 +337,7 @@ Version 1.1
 * updated Danish translation (scootergrisen)
 
 Version 1.2
+* added cmake support
 * updated color schemes
 * updated Spanish translation (Toni Estévez), updated Dutch translation (Heimen Stoffels)
 * updated Chinese (Simplified) translation (Tramsifex)
