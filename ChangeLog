@@ -344,3 +344,9 @@ Version 1.2
 * updated Chinese (Simplified) translation (Tramsifex)
 * updated Dunish translation (scootergrisen)
 * updated Italian translation (albanobattistella)
+
+Version 1.3
+* fixed cmake support
+* prepend custom stylesheets to the application stylesheet (John Lindgren)
+* updated Catalan translation (Toni Estévez)
+* updated French translation (setvisible)
