@@ -15,17 +15,15 @@ depends=(gcc-libs
          qt5-svg)
 makedepends=(cmake
              qt5-tools)
-source=(https://downloads.sourceforge.net/project/$pkgname/$pkgname-$pkgver.tar.bz2)
-sha256sums=('dc10e6939d423b925981ce67febb1a015b6f61c022a9cc7e6c8b5efea4588bff')
 
 build() {
-  cmake -B build -S $pkgname-$pkgver \
-    -DCMAKE_INSTALL_PREFIX=/usr
+  cd ..
+  cmake -B build -DCMAKE_INSTALL_PREFIX=/usr
   cmake --build build
 }
 
 package() {
+  cd ..
   DESTDIR="$pkgdir" cmake --install build
-
-  install -Dm644 $pkgname-$pkgver/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+  install -Dm644 COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 } 
