@@ -1,0 +1,5 @@
+build/
+pkg/
+*.pkg.tar.*
+*.pro.user
+*.qm
