@@ -44,6 +44,9 @@ public:
     int pixelMetric(PixelMetric metric, const QStyleOption *option, const QWidget *widget) const override;
     int styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const override;
 
+protected:
+    bool event(QEvent *e) override;
+
 private:
     QString m_style;
     int m_dialogButtonsHaveIcons;
