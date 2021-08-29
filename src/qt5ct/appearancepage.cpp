@@ -34,6 +34,7 @@
 #include <QMessageBox>
 #include <QMenu>
 #include <QIcon>
+#include <QProxyStyle>
 #include <QStringList>
 #include <qpa/qplatformthemefactory_p.h>
 #include "qt5ct.h"
@@ -41,6 +42,26 @@
 #include "paletteeditdialog.h"
 #include "ui_appearancepage.h"
 #include "ui_previewform.h"
+
+class PreviewStyle : public QProxyStyle
+{
+public:
+    using QProxyStyle::QProxyStyle;
+
+    void setPalette(QPalette palette)
+    {
+        m_palette = palette;
+    }
+
+    void polish(QWidget *widget) override
+    {
+        QProxyStyle::polish(widget);
+        widget->setPalette(m_palette);
+    }
+
+private:
+    QPalette m_palette;
+};
 
 AppearancePage::AppearancePage(QWidget *parent) :
     TabPage(parent),
@@ -94,7 +115,6 @@ AppearancePage::AppearancePage(QWidget *parent) :
 
 AppearancePage::~AppearancePage()
 {
-    delete m_selectedStyle;
     delete m_ui;
     delete m_previewUi;
 }
@@ -112,15 +132,11 @@ void AppearancePage::writeSettings()
 
 void AppearancePage::on_styleComboBox_activated(const QString &text)
 {
-    QStyle *style = QStyleFactory::create(text);
-    if(!style)
-        return;
-    setStyle(m_previewWidget, style);
-
-    delete m_selectedStyle;
-    m_selectedStyle = style;
-
+    PreviewStyle *old = m_selectedStyle;
+    m_selectedStyle = new PreviewStyle(text);
+    m_selectedStyle->setParent(this);
     updatePalette();
+    delete old;
 }
 
 void AppearancePage::on_colorSchemeComboBox_activated(int)
@@ -276,7 +292,7 @@ void AppearancePage::updatePalette()
 
 void AppearancePage::setPreviewPalette(const QPalette &p)
 {
-    QPalette previewPalette = palette();
+    QPalette previewPalette = p;
 
     QPalette::ColorGroup colorGroup = QPalette::Disabled;
 
@@ -296,7 +312,8 @@ void AppearancePage::setPreviewPalette(const QPalette &p)
         previewPalette.setColor(QPalette::Inactive, role, p.color(colorGroup, role));
     }
 
-    setPalette(m_ui->mdiArea, previewPalette);
+    m_selectedStyle->setPalette(previewPalette);
+    setStyle(m_ui->mdiArea, m_selectedStyle);
 }
 
 void AppearancePage::updateActions()
@@ -333,7 +350,7 @@ void AppearancePage::readSettings()
 
     if(m_ui->colorSchemeComboBox->count() == 0)
     {
-        m_customPalette = palette(); //load fallback palette
+        m_customPalette = QPalette();
     }
     else
     {
@@ -360,18 +377,6 @@ void AppearancePage::setStyle(QWidget *w, QStyle *s)
         }
     }
     w->setStyle(s);
-}
-
-void AppearancePage::setPalette(QWidget *w, QPalette p)
-{
-    for(QObject *o : w->children())
-    {
-        if(o->isWidgetType())
-        {
-            setPalette(qobject_cast<QWidget *>(o), p);
-        }
-    }
-    w->setPalette(p);
 }
 
 void AppearancePage::findColorSchemes(const QString &path)
