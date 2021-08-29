@@ -119,3 +119,13 @@ int Qt5CTProxyStyle::styleHint(QStyle::StyleHint hint, const QStyleOption *optio
     }
     return QProxyStyle::styleHint(hint, option, widget, returnData);
 }
+
+bool Qt5CTProxyStyle::event(QEvent *e)
+{
+    // QProxyStyle::event() doesn't handle DeferredDelete correctly
+    // (forwards it to the baseStyle instead of deleting itself)
+    if (e->type() == QEvent::DeferredDelete)
+        return QObject::event(e);
+
+    return QProxyStyle::event(e);
+}
