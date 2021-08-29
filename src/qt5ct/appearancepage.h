@@ -36,7 +36,7 @@ class AppearancePage;
 class PreviewForm;
 }
 
-class QStyle;
+class PreviewStyle;
 class QAction;
 
 class AppearancePage : public TabPage
@@ -64,12 +64,11 @@ private slots:
 private:
     void readSettings();
     void setStyle(QWidget *w, QStyle *s);
-    void setPalette(QWidget *w, QPalette p);
     void findColorSchemes(const QString &path);
     void findColorSchemes(const QStringList &paths);
     void createColorScheme(const QString &name, const QPalette &palette);
     Ui::AppearancePage *m_ui;
-    QStyle *m_selectedStyle = nullptr;
+    PreviewStyle *m_selectedStyle = nullptr;
     QPalette m_customPalette;
     QWidget *m_previewWidget;
     QAction *m_changeColorSchemeAction, *m_renameColorSchemeAction, *m_removeColorSchemeAction;
