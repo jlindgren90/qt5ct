@@ -146,6 +146,9 @@ const QFont *Qt5CTPlatformTheme::font(QPlatformTheme::Font type) const
 
 QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
 {
+    if(m_isIgnored)
+        return QPlatformTheme::themeHint(hint);
+
     switch (hint)
     {
     case QPlatformTheme::CursorFlashTime:
@@ -194,8 +197,12 @@ QIcon Qt5CTPlatformTheme::fileIcon(const QFileInfo &fileInfo, QPlatformTheme::Ic
 
 void Qt5CTPlatformTheme::applySettings()
 {
-    if(!QGuiApplication::desktopSettingsAware())
+    if(!QGuiApplication::desktopSettingsAware() || m_isIgnored)
+    {
+        m_usePalette = false;
+        m_update = true;
         return;
+    }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     if(!m_update)
@@ -380,8 +387,22 @@ void Qt5CTPlatformTheme::readSettings()
     QStringList qssPaths = settings.value("stylesheets").toStringList();
     m_userStyleSheet = loadStyleSheets(qssPaths);
 #endif
-
     settings.endGroup();
+
+    //load troubleshooting
+    if(!m_update)
+    {
+        settings.beginGroup("Troubleshooting");
+        m_isIgnored = settings.value("ignored_applications").toStringList().contains(QCoreApplication::applicationFilePath());
+        int forceRasterWidgets = settings.value("force_raster_widgets", Qt::PartiallyChecked).toInt();
+        if(!m_isIgnored && forceRasterWidgets == Qt::Checked)
+            QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets, true);
+        else if(!m_isIgnored && forceRasterWidgets == Qt::Unchecked)
+            QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets, false);
+        if(m_isIgnored)
+            m_usePalette = false;
+        settings.endGroup();
+    }
 }
 
 #ifdef QT_WIDGETS_LIB
