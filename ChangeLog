@@ -358,3 +358,6 @@ Version 1.4
 * updated Spanish translation (Toni Estévez)
 * updated Russian translation
 * updated Greek translation (Dimitrios Glentadakis)
+
+Version 1.5
+* fixed build regression
