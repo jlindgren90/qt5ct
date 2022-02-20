@@ -31,6 +31,8 @@ the following line:
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+(or qt5ct for compatibility with Qt5 Configuration Tool)
+
 Now restart X11 server to take the changes effect.
 
 Extra build options (for advanced users only):

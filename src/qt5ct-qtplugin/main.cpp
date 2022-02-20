@@ -42,9 +42,10 @@ public:
 QPlatformTheme *Qt5CTPlatformThemePlugin::create(const QString &key, const QStringList &params)
 {
     Q_UNUSED(params);
-    if (key.toLower() == "qt5ct")
+    if (key.toLower() == "qt5ct" || key.toLower() == "qt6ct")
         return new Qt5CTPlatformTheme();
-    return NULL;
+
+    return nullptr;
 }
 
 QT_END_NAMESPACE
