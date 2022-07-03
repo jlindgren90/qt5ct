@@ -85,65 +85,65 @@
         <translation>Fjern</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="145"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="258"/>
         <source>Enter Color Scheme Name</source>
         <translation>Indtast navn på farveskema</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="145"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="258"/>
         <source>File name:</source>
         <translation>Filnavn:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="236"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="154"/>
+        <location filename="../appearancepage.cpp" line="230"/>
+        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="268"/>
         <source>Error</source>
         <translation>Fejl</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="154"/>
+        <location filename="../appearancepage.cpp" line="230"/>
+        <location filename="../appearancepage.cpp" line="268"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Farveskemaet &quot;%1&quot; findes allerede</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="195"/>
+        <location filename="../appearancepage.cpp" line="253"/>
         <source>Warning</source>
         <translation>Advarsel</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="195"/>
+        <location filename="../appearancepage.cpp" line="253"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Farveskemaet &quot;%1&quot; er skrivebeskyttet</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="198"/>
+        <location filename="../appearancepage.cpp" line="200"/>
         <source>Confirm Remove</source>
         <translation>Bekræft fjernelse</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="199"/>
+        <location filename="../appearancepage.cpp" line="201"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Er du sikker på, at du vil fjerne farveskemaet &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="221"/>
         <source>%1 (copy)</source>
         <translation>%1 (kopi)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="238"/>
         <source>Unable to copy file</source>
         <translation>Kan ikke kopiere fil</translation>
     </message>
@@ -474,16 +474,16 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
-        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke indstillet (krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
+        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required value: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="128"/>
+        <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
         <translation>Miljøvariablen &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; er ikke indstillet korrekt (nuværende værdi: &lt;b&gt;%1&lt;/b&gt;, krævet værdi: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="135"/>
+        <location filename="../mainwindow.cpp" line="136"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
         <translation>Kan ikke finde &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
     </message>

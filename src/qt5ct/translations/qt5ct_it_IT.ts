@@ -85,65 +85,65 @@
         <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="145"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="258"/>
         <source>Enter Color Scheme Name</source>
         <translation>Inserisci nome dello schema colori</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="145"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="258"/>
         <source>File name:</source>
         <translation>Nome file:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="236"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="154"/>
+        <location filename="../appearancepage.cpp" line="230"/>
+        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="268"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="154"/>
+        <location filename="../appearancepage.cpp" line="230"/>
+        <location filename="../appearancepage.cpp" line="268"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Lo schema colori &quot;%1&quot; è già esistente</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="195"/>
+        <location filename="../appearancepage.cpp" line="253"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="195"/>
+        <location filename="../appearancepage.cpp" line="253"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Lo schema colori &quot;%1&quot; è in sola lettura</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="198"/>
+        <location filename="../appearancepage.cpp" line="200"/>
         <source>Confirm Remove</source>
         <translation>Conferma rimozione</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="199"/>
+        <location filename="../appearancepage.cpp" line="201"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Sei sicuro di voler rimuovere lo schema colori &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="221"/>
         <source>%1 (copy)</source>
         <translation>%1 (copia)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="238"/>
         <source>Unable to copy file</source>
         <translation>Impossibile copiare il file</translation>
     </message>
@@ -474,16 +474,16 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
-        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>La &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; variabile d&apos;ambiente non è impostata (valore richiesto: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
+        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required value: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="128"/>
+        <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
         <translation>La &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; la variabile d&apos;ambiente non è impostata correttamente (valore corrente: &lt;b&gt;%1&lt;/b&gt;, valore richiesto: &lt;b&gt;qt5ct&lt;/b&gt;).</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="135"/>
+        <location filename="../mainwindow.cpp" line="136"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
         <translation>Impossibile trovare &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
     </message>
