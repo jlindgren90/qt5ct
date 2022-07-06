@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Переменная среды &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; не установлена (требуемые значения: &lt;b&gt;qt5ct&lt;/b&gt; или &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Переменная среды&lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; установлена неправильно (текущее значение: &lt;b&gt;%1&lt;/b&gt;, требуемые значения: &lt;b&gt;qt5ct&lt;/b&gt; или &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
