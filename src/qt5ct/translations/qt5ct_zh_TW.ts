@@ -479,8 +479,8 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
-        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required value: &lt;b&gt;qt5ct&lt;/b&gt;).</source>
-        <translation>&lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; 環境變數未正確設定（目前的值：&lt;b&gt;%1&lt;/b&gt;，必要的值：&lt;b&gt;qt5ct&lt;/b&gt;）。</translation>
+        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
