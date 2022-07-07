@@ -47,7 +47,7 @@
     <message>
         <location filename="../appearancepage.ui" line="161"/>
         <source>Color scheme:</source>
-        <translation>Esquema de colors:</translation>
+        <translation>Combinació de colors:</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="187"/>
@@ -89,7 +89,7 @@
         <location filename="../appearancepage.cpp" line="219"/>
         <location filename="../appearancepage.cpp" line="258"/>
         <source>Enter Color Scheme Name</source>
-        <translation>Introdueix el nom de l&apos;esquema de colors</translation>
+        <translation>Introdueix el nom de la combinació de colors</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="145"/>
@@ -111,7 +111,7 @@
         <location filename="../appearancepage.cpp" line="230"/>
         <location filename="../appearancepage.cpp" line="268"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
-        <translation>Ja existeix l&apos;esquema de colors «%1»</translation>
+        <translation>Ja existeix la combinació de colors «%1»</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="172"/>
@@ -125,7 +125,7 @@
         <location filename="../appearancepage.cpp" line="195"/>
         <location filename="../appearancepage.cpp" line="253"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
-        <translation>L&apos;esquema de colors «%1» és de només lectura</translation>
+        <translation>La combinació de colors «%1» és de només lectura</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="200"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="201"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
-        <translation>Segur que voleu suprimir l&apos;esquema de colors «%1»?</translation>
+        <translation>Segur que voleu suprimir la combinació de colors «%1»?</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="221"/>
@@ -455,7 +455,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Solució de problemes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha configurat la variable d&apos;entorn &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; (valors requerits: &lt;b&gt;qt5ct&lt;/b&gt; o &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha configurat correctament la variable d&apos;entorn &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; (valor actual: &lt;b&gt;%1&lt;/b&gt;, valors obligatoris: &lt;b&gt;qt5ct&lt;/b&gt; o &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
@@ -791,42 +791,42 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="20"/>
         <source>Ignored applications:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicacions ignorades:</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="29"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Afegeix...</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>
         <source>Do not apply any styles and color schemes for the listed applications.</source>
-        <translation type="unfinished"></translation>
+        <translation>No apliquis cap estil ni combinació de colors a les aplicacions enumerades.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="82"/>
         <source>Make top-level widgets use pure raster surfaces, and do not support non-native GL-based child widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fes que els ginys de nivell superior utilitzin superfícies rasteritzades pures i no admetin ginys secundaris no natius basats en GL.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="85"/>
         <source>Force raster surface</source>
-        <translation type="unfinished"></translation>
+        <translation>Força la superfície rasteritzada</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Select Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona l&apos;aplicació</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Executable files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fitxers executables (*)</translation>
     </message>
 </context>
 </TS>

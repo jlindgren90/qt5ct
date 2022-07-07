@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Η μεταβλητή περιβάλλοντος &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; δεν έχει οριστεί (απαιτούμενες τιμές: &lt;b&gt;qt5ct&lt;/b&gt; ή &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Η μεταβλητή περιβάλλοντος &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; δεν έχει οριστεί σωστά (τρέχουσα τιμή: &lt;b&gt;%1&lt;/b&gt;, απαιτούμενες τιμές: &lt;b&gt;qt5ct&lt;/b&gt; ή &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
