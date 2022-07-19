@@ -239,17 +239,19 @@ void Qt5CTPlatformTheme::applySettings()
         if(m_update && m_usePalette)
             qApp->setPalette(*m_palette);
 
-        // prepend our stylesheet to that of the application
-        // (first removing any previous stylesheet we have set)
-        QString appStyleSheet = qApp->styleSheet();
-        int prevIndex = appStyleSheet.indexOf(m_prevStyleSheet);
-        if (prevIndex >= 0) {
-            appStyleSheet.remove(prevIndex, m_prevStyleSheet.size());
-            qApp->setStyleSheet(m_userStyleSheet + appStyleSheet);
-        } else {
-            qCDebug(lqt5ct) << "custom style sheet is disabled";
+        if (m_userStyleSheet != m_prevStyleSheet) {
+            // prepend our stylesheet to that of the application
+            // (first removing any previous stylesheet we have set)
+            QString appStyleSheet = qApp->styleSheet();
+            int prevIndex = appStyleSheet.indexOf(m_prevStyleSheet);
+            if (prevIndex >= 0) {
+                appStyleSheet.remove(prevIndex, m_prevStyleSheet.size());
+                qApp->setStyleSheet(m_userStyleSheet + appStyleSheet);
+            } else {
+                qCDebug(lqt5ct) << "custom style sheet is disabled";
+            }
+            m_prevStyleSheet = m_userStyleSheet;
         }
-        m_prevStyleSheet = m_userStyleSheet;
     }
 #endif
     QGuiApplication::setFont(m_generalFont); //apply font
