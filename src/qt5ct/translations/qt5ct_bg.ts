@@ -455,7 +455,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Отстраняване на проблеми</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Променливата &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt;  на средата не е зададена (възможните стойности са: &lt;b&gt;qt5ct&lt;/b&gt; или &lt;b&gt;qt6ct&lt;/b&gt; ).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>Променливата &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; не е зададена правилно. (текуща стойност &lt;b&gt;%1&lt;/b&gt;, необходими стойности &lt;b&gt;qt5ct&lt;/b&gt; или &lt;b&gt;qt6ct&lt;/b&gt;). </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
@@ -791,42 +791,42 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="20"/>
         <source>Ignored applications:</source>
-        <translation type="unfinished"></translation>
+        <translation>Игнорирани програми:</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="29"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавяне...</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
         <source>Remove</source>
-        <translation type="unfinished">Премахване</translation>
+        <translation>Премахване</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>
         <source>Do not apply any styles and color schemes for the listed applications.</source>
-        <translation type="unfinished"></translation>
+        <translation>Да не се прилага нито един стил и цветова схема за изброените приложения.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="82"/>
         <source>Make top-level widgets use pure raster surfaces, and do not support non-native GL-based child widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>Задаване на джаджите от най-високо ниво да използват чисти растерни повърхности и да не поддържат неприсъщи GL-базирани дъщерни джаджи.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="85"/>
         <source>Force raster surface</source>
-        <translation type="unfinished"></translation>
+        <translation>Принудителна растерна повърхност</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Select Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Избор на програма</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Executable files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Изпълними файлове (*)</translation>
     </message>
 </context>
 </TS>
