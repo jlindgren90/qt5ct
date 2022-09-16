@@ -122,7 +122,7 @@ QList<QTreeWidgetItem *> IconThemePage::loadThemes()
     {
         QTreeWidgetItem *item = loadTheme(info.canonicalFilePath());
         if(item)
-            items << loadTheme(info.canonicalFilePath());
+            items << item;
         QMetaObject::invokeMethod(m_progressBar, "setValue", Qt::QueuedConnection, Q_ARG(int, ++i * 100 / themeFileList.count()));
     }
     return items;
@@ -138,11 +138,10 @@ QTreeWidgetItem *IconThemePage::loadTheme(const QString &path)
     if(dirs.isEmpty() || config.value("Hidden", false).toBool())
         return nullptr;
 
-    QString name, comment;
     QString lang = QLocale::system().name();
 
-    name = config.value(QString("Name[%1]").arg(lang)).toString();
-    comment = config.value(QString("Comment[%1]").arg(lang)).toString();
+    QString name = config.value(QString("Name[%1]").arg(lang)).toString();
+    QString comment = config.value(QString("Comment[%1]").arg(lang)).toString();
 
     if(lang.contains("_"))
         lang = lang.split("_").first();
