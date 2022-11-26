@@ -85,9 +85,7 @@ Qt5CTPlatformTheme::Qt5CTPlatformTheme()
 
 Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
 {
-    if(m_palette)
-        delete m_palette;
-
+    delete m_palette;
 }
 
 #ifdef GLOBAL_MENU
@@ -428,7 +426,7 @@ QString Qt5CTPlatformTheme::loadStyleSheets(const QStringList &paths)
         if(!content.endsWith(QChar::LineFeed))
             content.append(QChar::LineFeed);
     }
-    QRegularExpression regExp("//.*\n");
+    static const QRegularExpression regExp("//.*\n");
     content.replace(regExp, "\n");
     return content;
 }

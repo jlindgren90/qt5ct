@@ -118,7 +118,7 @@ QList<QTreeWidgetItem *> IconThemePage::loadThemes()
     }
 
     int i = 0;
-    for(const QFileInfo &info : themeFileList)
+    for(const QFileInfo &info : qAsConst(themeFileList))
     {
         QTreeWidgetItem *item = loadTheme(info.canonicalFilePath());
         if(item)
@@ -187,7 +187,7 @@ QIcon IconThemePage::findIcon(const QString &themePath, int size, const QString 
     QString iconPath;
     int iconSize = 0;
 
-    for(const QString &dir : dirs)
+    for(const QString &dir : qAsConst(dirs))
     {
         config.beginGroup(dir);
         QDir iconDir = QFileInfo(themePath).path() + "/" + dir;
@@ -233,7 +233,7 @@ QIcon IconThemePage::findIcon(const QString &themePath, int size, const QString 
     parents.append("gnome");
     parents.removeDuplicates();
 
-    for(const QString &parent : parents)
+    for(const QString &parent : qAsConst(parents))
     {
         QString parentThemePath = QDir(QFileInfo(themePath).path() + "/../" + parent).canonicalPath() + "/index.theme";
 

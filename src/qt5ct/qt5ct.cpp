@@ -75,7 +75,7 @@ QStringList Qt5CT::iconPaths()
     paths.removeDuplicates();
 
     //remove invalid
-    for(const QString &p : paths)
+    for(const QString &p : qAsConst(paths))
     {
         if(QDir(p).exists())
             out << p;
@@ -139,7 +139,7 @@ QString Qt5CT::resolvePath(const QString &path)
         return tmp;
 
     //find environment variables
-    QRegularExpression regexp("\\$([A-Z_]+)\\/");
+    static const QRegularExpression regexp("\\$([A-Z_]+)\\/");
     QRegularExpressionMatchIterator it = regexp.globalMatch(tmp);
 
     while (it.hasNext())

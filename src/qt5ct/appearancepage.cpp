@@ -101,8 +101,7 @@ AppearancePage::AppearancePage(QWidget *parent) :
 
 AppearancePage::~AppearancePage()
 {
-    if(m_selectedStyle)
-        delete m_selectedStyle;
+    delete m_selectedStyle;
     delete m_ui;
     delete m_previewUi;
 }
@@ -127,8 +126,7 @@ void AppearancePage::on_styleComboBox_activated(const QString &text)
         return;
     setStyle(m_previewWidget, style);
 
-    if(m_selectedStyle)
-        delete m_selectedStyle;
+    delete m_selectedStyle;
     m_selectedStyle = style;
 
     updatePalette();
@@ -394,7 +392,7 @@ void AppearancePage::findColorSchemes(const QString &path)
     dir.setFilter(QDir::Files);
     dir.setNameFilters(QStringList() << "*.conf");
 
-    for(QFileInfo info : dir.entryInfoList())
+    for(const QFileInfo &info : dir.entryInfoList())
     {
         m_ui->colorSchemeComboBox->addItem(info.baseName(), info.filePath());
     }
