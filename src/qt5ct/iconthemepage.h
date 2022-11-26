@@ -59,6 +59,7 @@ private:
     QList<QTreeWidgetItem *> loadThemes();
     QTreeWidgetItem *loadTheme(const QString &path);
     QIcon findIcon(const QString &themePath, int size, const QString &name);
+    QIcon findIconHelper(const QString &themePath, int size, const QString &name, QStringList *visited);
     Ui::IconThemePage *m_ui;
     QFutureWatcher<QList<QTreeWidgetItem *>> *m_watcher;
     QProgressBar *m_progressBar;
