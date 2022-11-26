@@ -112,8 +112,7 @@ QList<QTreeWidgetItem *> IconThemePage::loadThemes()
         for(const QFileInfo &info : dir.entryInfoList())
         {
             QDir themeDir(info.absoluteFilePath());
-            themeDir.setFilter(QDir::Files);
-            themeFileList << themeDir.entryInfoList(QStringList() << "index.theme");
+            themeFileList << themeDir.entryInfoList(QStringList() << "index.theme", QDir::Files);
         }
     }
 
