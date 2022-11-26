@@ -53,6 +53,11 @@ IconThemePage::IconThemePage(QWidget *parent) :
 
 IconThemePage::~IconThemePage()
 {
+    if(m_watcher->isRunning())
+    {
+        m_stopped = true;
+        m_watcher->waitForFinished();
+    }
     delete m_ui;
 }
 
@@ -103,6 +108,8 @@ void IconThemePage::readSettings()
 
 QList<QTreeWidgetItem *> IconThemePage::loadThemes()
 {
+    m_stopped = false;
+
     QFileInfoList themeFileList;
     QList<QTreeWidgetItem *> items;
     for(const QString &path : Qt5CT::iconPaths())
@@ -114,6 +121,9 @@ QList<QTreeWidgetItem *> IconThemePage::loadThemes()
             QDir themeDir(info.absoluteFilePath());
             themeFileList << themeDir.entryInfoList(QStringList() << "index.theme", QDir::Files);
         }
+
+        if(m_stopped)
+            return items;
     }
 
     int i = 0;
@@ -122,6 +132,14 @@ QList<QTreeWidgetItem *> IconThemePage::loadThemes()
         QTreeWidgetItem *item = loadTheme(info.canonicalFilePath());
         if(item)
             items << item;
+
+        if(m_stopped)
+        {
+            qDeleteAll(items);
+            items.clear();
+            return items;
+        }
+
         QMetaObject::invokeMethod(m_progressBar, "setValue", Qt::QueuedConnection, Q_ARG(int, ++i * 100 / themeFileList.count()));
     }
     return items;

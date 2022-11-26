@@ -31,6 +31,7 @@
 
 #include <QIcon>
 #include <QFutureWatcher>
+#include <atomic>
 #include "tabpage.h"
 
 namespace Ui {
@@ -63,6 +64,7 @@ private:
     Ui::IconThemePage *m_ui;
     QFutureWatcher<QList<QTreeWidgetItem *>> *m_watcher;
     QProgressBar *m_progressBar;
+    std::atomic_bool m_stopped = ATOMIC_VAR_INIT(false);
 };
 
 #endif // ICONTHEMEPAGE_H
