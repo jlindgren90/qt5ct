@@ -340,8 +340,10 @@ void Qt5CTPlatformTheme::readSettings()
     settings.endGroup();
 
     settings.beginGroup("Fonts");
-    m_generalFont = settings.value("general", QPlatformTheme::font(QPlatformTheme::SystemFont)).value<QFont>();
-    m_fixedFont = settings.value("fixed", QPlatformTheme::font(QPlatformTheme::FixedFont)).value<QFont>();
+    m_generalFont = QGuiApplication::font();
+    m_generalFont.fromString(settings.value("general", QGuiApplication::font()).toString());
+    m_fixedFont = QGuiApplication::font();
+    m_fixedFont.fromString(settings.value("fixed", QGuiApplication::font()).toString());
     settings.endGroup();
 
     settings.beginGroup("Interface");
