@@ -85,65 +85,65 @@
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>Enter Color Scheme Name</source>
         <translation>輸入顏色方案名稱</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>File name:</source>
         <translation>檔案名稱：</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="238"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>Error</source>
         <translation>錯誤</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>顏色方案「%1」已經存在</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>顏色方案「%1」為唯讀狀態</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="198"/>
         <source>Confirm Remove</source>
         <translation>確認移除</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="201"/>
+        <location filename="../appearancepage.cpp" line="199"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>您是否確定要移除顏色方案「%1」？</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="221"/>
+        <location filename="../appearancepage.cpp" line="219"/>
         <source>%1 (copy)</source>
         <translation>%1（拷貝）</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="236"/>
         <source>Unable to copy file</source>
         <translation>無法複製檔案</translation>
     </message>
@@ -259,12 +259,12 @@
         <translation>移除 fonts.conf</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="110"/>
+        <location filename="../fontspage.cpp" line="111"/>
         <source>Remove Font Configuration</source>
         <translation>移除字型設定</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="111"/>
+        <location filename="../fontspage.cpp" line="112"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
         <translation>您確定真的要刪除 &lt;i&gt;%1&lt;/i&gt; 嗎？</translation>
     </message>

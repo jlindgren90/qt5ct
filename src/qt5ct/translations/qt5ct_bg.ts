@@ -85,65 +85,65 @@
         <translation>Премахване</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>Enter Color Scheme Name</source>
         <translation>Въведете име на цветовата схема</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>File name:</source>
         <translation>Име на файл:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="238"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>Error</source>
         <translation>Грешка</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Цветовата схема &quot;%1&quot; вече съществува</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>Warning</source>
         <translation>Внимание</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Цветовата схема &quot;%1&quot; е само за четене</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="198"/>
         <source>Confirm Remove</source>
         <translation>Потвърждаване на премахването</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="201"/>
+        <location filename="../appearancepage.cpp" line="199"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Сигурен ли сте, че искате да премахнете цветова схема &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="221"/>
+        <location filename="../appearancepage.cpp" line="219"/>
         <source>%1 (copy)</source>
         <translation>%1 (копиране)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="236"/>
         <source>Unable to copy file</source>
         <translation>Не може да бъде копиран файла</translation>
     </message>
@@ -259,12 +259,12 @@
         <translation>Премахване на  fonts.conf</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="110"/>
+        <location filename="../fontspage.cpp" line="111"/>
         <source>Remove Font Configuration</source>
         <translation>Премахване на конфигурацията на шрифта</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="111"/>
+        <location filename="../fontspage.cpp" line="112"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
         <translation>Наистина ли искате да изтриете &lt;i&gt;%1&lt;/i&gt;?</translation>
     </message>

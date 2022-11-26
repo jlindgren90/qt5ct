@@ -85,65 +85,65 @@
         <translation>Αφαίρεση</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>Enter Color Scheme Name</source>
         <translation>Εισαγάγετε το όνομα του χρωματικού σχήματος</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>File name:</source>
         <translation>Όνομα αρχείου:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="238"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Το χρωματικό σχήμα «%1» υπάρχει ήδη</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>Warning</source>
         <translation>Προειδοποίηση</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Το χρωματικό σχήμα «%1» είναι μόνο για ανάγνωση</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="198"/>
         <source>Confirm Remove</source>
         <translation>Επικύρωση της αφαίρεσης</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="201"/>
+        <location filename="../appearancepage.cpp" line="199"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Είστε σίγουρος-η ότι θέλετε να αφαιρέσετε το χρωματικό σχήμα «%1»;</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="221"/>
+        <location filename="../appearancepage.cpp" line="219"/>
         <source>%1 (copy)</source>
         <translation>%1 (αντίγραφο)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="236"/>
         <source>Unable to copy file</source>
         <translation>Αδύνατη η αντιγραφή του αρχείου</translation>
     </message>
@@ -259,12 +259,12 @@
         <translation>Αφαίρεση του fonts.conf</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="110"/>
+        <location filename="../fontspage.cpp" line="111"/>
         <source>Remove Font Configuration</source>
         <translation>Αφαίρεση διαμόρφωσης γραμματοσειράς</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="111"/>
+        <location filename="../fontspage.cpp" line="112"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
         <translation>Επιθυμείτε σίγουρα την διαγραφή του &lt;i&gt;%1&lt;/i&gt;;</translation>
     </message>

@@ -85,65 +85,65 @@
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>Enter Color Scheme Name</source>
         <translation>Entrer le nom du jeu de couleurs</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="145"/>
-        <location filename="../appearancepage.cpp" line="219"/>
-        <location filename="../appearancepage.cpp" line="258"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="217"/>
+        <location filename="../appearancepage.cpp" line="256"/>
         <source>File name:</source>
         <translation>Nom du fichier :</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="238"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="154"/>
-        <location filename="../appearancepage.cpp" line="230"/>
-        <location filename="../appearancepage.cpp" line="268"/>
+        <location filename="../appearancepage.cpp" line="152"/>
+        <location filename="../appearancepage.cpp" line="228"/>
+        <location filename="../appearancepage.cpp" line="266"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Le jeu de couleurs &quot;%1&quot; existe déjà</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>Warning</source>
         <translation>Avertissement</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="195"/>
-        <location filename="../appearancepage.cpp" line="253"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="193"/>
+        <location filename="../appearancepage.cpp" line="251"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Le jeu de couleurs &quot;%1&quot; est en lecture seule</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="198"/>
         <source>Confirm Remove</source>
         <translation>Confirmer la suppression</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="201"/>
+        <location filename="../appearancepage.cpp" line="199"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Êtes-vous sûr de vouloir supprimer le jeu de couleurs &quot;%1&quot; ?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="221"/>
+        <location filename="../appearancepage.cpp" line="219"/>
         <source>%1 (copy)</source>
         <translation>%1 (copie)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="238"/>
+        <location filename="../appearancepage.cpp" line="236"/>
         <source>Unable to copy file</source>
         <translation>Impossible de copier le fichier</translation>
     </message>
@@ -259,12 +259,12 @@
         <translation>Supprimer  fonts.conf</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="110"/>
+        <location filename="../fontspage.cpp" line="111"/>
         <source>Remove Font Configuration</source>
         <translation>Supprimer la configuration de la police</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="111"/>
+        <location filename="../fontspage.cpp" line="112"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
         <translation>Êtes-vous sûr de vouloir supprimer &lt;i&gt;%1&lt;/i&gt; ?</translation>
     </message>
