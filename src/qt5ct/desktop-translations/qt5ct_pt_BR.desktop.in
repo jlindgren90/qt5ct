@@ -24,6 +24,8 @@ Comment=Qt5 Configuration Tool
 
 
 
+
+
 Exec=qt5ct
 Icon=preferences-desktop-theme
 Terminal=false
@@ -32,3 +34,4 @@ Categories=Settings;DesktopSettings;Qt;
 
 
 # Translations
+Comment[pt_BR]=Qt5 Ferramenta de Configuração

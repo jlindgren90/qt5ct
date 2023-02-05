@@ -194,7 +194,7 @@
     <message>
         <location filename="../fontconfigdialog.ui" line="90"/>
         <source>Antialiasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Élsimítás</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="97"/>
@@ -382,12 +382,12 @@
     <message>
         <location filename="../interfacepage.cpp" line="61"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Csak az ikon megjelenítése</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="62"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Csak a szöveg megjelenítése</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="63"/>
@@ -410,7 +410,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Qt5 Configuration Tool</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt5 beállító eszköz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="45"/>
@@ -420,12 +420,12 @@
     <message>
         <location filename="../mainwindow.ui" line="52"/>
         <source>Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Információ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Hide</source>
-        <translation type="unfinished"></translation>
+        <translation>Elrejtés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="50"/>
@@ -445,12 +445,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="53"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Felület</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="55"/>
         <source>Style Sheets</source>
-        <translation type="unfinished"></translation>
+        <translation>Stíluslapok</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
@@ -460,12 +460,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzió: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="109"/>
         <source>Warning</source>
-        <translation type="unfinished">Figyelmeztetés</translation>
+        <translation>figyelmeztetés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
@@ -493,12 +493,12 @@
     <message>
         <location filename="../paletteeditdialog.ui" line="14"/>
         <source>Palette Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletta szerkesztő</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="79"/>
         <source>Reset palette</source>
-        <translation type="unfinished"></translation>
+        <translation>Paletta visszaállítása</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="29"/>
@@ -661,7 +661,7 @@
     <message>
         <location filename="../previewform.ui" line="74"/>
         <source>RadioButton</source>
-        <translation type="unfinished"></translation>
+        <translation>Rádiógomb</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="84"/>
@@ -674,12 +674,12 @@
     <message>
         <location filename="../qsseditordialog.cpp" line="46"/>
         <source>%1 - Style Sheet Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 - Stíluslapszerkesztő</translation>
     </message>
     <message>
         <location filename="../qsseditordialog.ui" line="14"/>
         <source>Style Sheet Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Stíluslapszerkesztő</translation>
     </message>
 </context>
 <context>
@@ -711,7 +711,7 @@
     <message>
         <location filename="../qsspage.cpp" line="52"/>
         <source>Create a Copy</source>
-        <translation type="unfinished">Másolat létrehozás</translation>
+        <translation>Másolat létrehozás</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="92"/>
@@ -728,7 +728,7 @@
         <location filename="../qsspage.cpp" line="106"/>
         <location filename="../qsspage.cpp" line="251"/>
         <source>Enter Style Sheet Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Stíluslap neve</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="117"/>
@@ -747,33 +747,33 @@
     <message>
         <location filename="../qsspage.cpp" line="151"/>
         <source>Confirm Remove</source>
-        <translation type="unfinished">Törlés megerősítése</translation>
+        <translation>Törlés megerősítése</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="152"/>
         <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Biztos törölni szeretné ezt a stíluslapot: &quot;%1&quot;?</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="208"/>
         <source>Rename Style Sheet</source>
-        <translation type="unfinished"></translation>
+        <translation>Stíluslap átnevezése</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="208"/>
         <source>Style sheet name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stíluslap neve:</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="218"/>
         <location filename="../qsspage.cpp" line="263"/>
         <source>The style sheet &quot;%1&quot; already exists</source>
-        <translation type="unfinished"></translation>
+        <translation>A &quot;%1&quot; stíluslap már létezik</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="226"/>
         <source>Unable to rename file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem lehet átnevezni a fájlt</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="253"/>
@@ -783,7 +783,7 @@
     <message>
         <location filename="../qsspage.cpp" line="271"/>
         <source>Unable to copy file</source>
-        <translation type="unfinished">Nem lehet másolni a fájlt</translation>
+        <translation>Nem lehet másolni a fájlt</translation>
     </message>
 </context>
 <context>
@@ -801,7 +801,7 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Töröl</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>

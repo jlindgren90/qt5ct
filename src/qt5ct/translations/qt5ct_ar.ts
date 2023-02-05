@@ -465,7 +465,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="109"/>
         <source>Warning</source>
-        <translation type="unfinished">تحذير</translation>
+        <translation>تحذير</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="118"/>
@@ -485,7 +485,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>غير قادر على ايجاد &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -711,7 +711,7 @@
     <message>
         <location filename="../qsspage.cpp" line="52"/>
         <source>Create a Copy</source>
-        <translation type="unfinished">انشئ نسخة</translation>
+        <translation>انشئ نسخة</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="92"/>
@@ -801,7 +801,7 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
         <source>Remove</source>
-        <translation type="unfinished">حذف</translation>
+        <translation>حذف</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>

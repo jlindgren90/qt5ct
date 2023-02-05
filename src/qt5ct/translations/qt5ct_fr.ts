@@ -455,7 +455,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>résolution de problèmes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
@@ -791,7 +791,7 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="20"/>
         <source>Ignored applications:</source>
-        <translation type="unfinished"></translation>
+        <translation>applications ignorées</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="29"/>
@@ -801,7 +801,7 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
         <source>Remove</source>
-        <translation type="unfinished">Supprimer</translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>
