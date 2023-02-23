@@ -361,3 +361,16 @@ Version 1.4
 
 Version 1.5
 * fixed build regression
+
+Version 1.6
+* added xdgdesktopportal dialogs support (Marco Genasci)
+* added qt6ct compatibility
+* improved warning about incorrect environment variable
+* only prepend our stylesheet if it has changed (Carlo Teubner)
+* updated Russian translation
+* updated Bulgarian translation (Kiril Kirilov)
+* updated Polish translation (Marek Adamski)
+* fixed some clazy and clang-tidy warnings
+* icon loader: protect against recursion
+* changed font configuration format
+* updated Japanese translation (UTUMI Hirosi)
