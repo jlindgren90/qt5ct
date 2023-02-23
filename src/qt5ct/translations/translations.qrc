@@ -2,7 +2,6 @@
 <RCC version="1.0">
   <qresource>
     <file>qt5ct_ru.qm</file>
-    <file>qt5ct_uk_UA.qm</file>
     <file>qt5ct_zh_CN.qm</file>
     <file>qt5ct_zh_TW.qm</file>
     <file>qt5ct_tr.qm</file>
