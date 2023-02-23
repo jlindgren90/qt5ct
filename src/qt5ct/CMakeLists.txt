@@ -11,7 +11,6 @@ set(app_SRCS
   paletteeditdialog.cpp
   qsseditordialog.cpp
   qsspage.cpp
-  qt5ct.cpp
   tabpage.cpp
   troubleshootingpage.cpp
   appearancepage.ui
@@ -29,6 +28,6 @@ set(app_SRCS
 )
 
 add_executable(qt5ct ${app_SRCS})
-target_link_libraries(qt5ct PRIVATE Qt5::Widgets Qt5::Concurrent Qt5::WidgetsPrivate)
+target_link_libraries(qt5ct PRIVATE Qt5::Widgets Qt5::Concurrent Qt5::WidgetsPrivate qt5ct-common)
 install(TARGETS qt5ct DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(FILES qt5ct.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)

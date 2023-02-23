@@ -27,9 +27,6 @@
  */
 
 #include <QStylePlugin>
-#include <QSettings>
-#include <QStyleFactory>
-#include <qt5ct/qt5ct.h>
 #include "qt5ctproxystyle.h"
 
 class Qt5CTStylePlugin : public QStylePlugin
@@ -44,13 +41,7 @@ public:
 QStyle *Qt5CTStylePlugin::create(const QString &key)
 {
     if (key == "qt5ct-style")
-    {
-        QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
-        QString style = settings.value("Appearance/style", "Fusion").toString();
-        if(key == style || !QStyleFactory::keys().contains(style))
-            style = "Fusion";
-        return new Qt5CTProxyStyle(style);
-    }
+        return new Qt5CTProxyStyle();
     return nullptr;
 }
 

@@ -38,12 +38,19 @@
 #define QT5CT_VERSION_INT (QT5CT_VERSION_MAJOR<<8 | QT5CT_VERSION_MINOR)
 #define QT5CT_VERSION_STR QT5CT_STRINGIFY(QT5CT_VERSION_MAJOR.QT5CT_VERSION_MINOR)
 
+#include <QSet>
 #include <QString>
 #include <QStringList>
 
 class Qt5CT
 {
 public:
+    class StyleInstance
+    {
+    public:
+        virtual void reloadSettings() = 0;
+    };
+
     static void initConfig();
     static QString configPath();
     static QString configFile();
@@ -55,8 +62,12 @@ public:
     static QString systemLanguageID();
     static QString resolvePath(const QString &path);
 
+    static void registerStyleInstance(StyleInstance *instance);
+    static void unregisterStyleInstance(StyleInstance *instance);
+    static void reloadStyleInstanceSettings();
+
 private:
-    Qt5CT() {}
+    static QSet<StyleInstance*> styleInstances;
 };
 
 #endif // QT5CT_H

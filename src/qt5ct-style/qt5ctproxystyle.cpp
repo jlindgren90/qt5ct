@@ -27,21 +27,36 @@
  */
 
 #include <QSettings>
-#include <qt5ct/qt5ct.h>
+#include <QStyleFactory>
 #include "qt5ctproxystyle.h"
 
-Qt5CTProxyStyle::Qt5CTProxyStyle(const QString &key) :
-    QProxyStyle(key)
+Qt5CTProxyStyle::Qt5CTProxyStyle()
+{
+    Qt5CT::registerStyleInstance(this);
+    reloadSettings();
+}
+
+void Qt5CTProxyStyle::reloadSettings()
 {
     QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
     m_dialogButtonsHaveIcons = settings.value("Interface/dialog_buttons_have_icons", Qt::PartiallyChecked).toInt();
     m_activateItemOnSingleClick = settings.value("Interface/activate_item_on_single_click", Qt::PartiallyChecked).toInt();
     m_underlineShortcut = settings.value("Interface/underline_shortcut", Qt::PartiallyChecked).toInt();
+
+    QString style = settings.value("Appearance/style", "fusion").toString().toLower();
+    if(style == "qt5ct-style" || !QStyleFactory::keys().contains(style, Qt::CaseInsensitive))
+        style = "fusion";
+
+    if(style != m_style)
+    {
+        setBaseStyle(QStyleFactory::create(style));
+        m_style = style;
+    }
 }
 
 Qt5CTProxyStyle::~Qt5CTProxyStyle()
 {
-    //qDebug("%s", Q_FUNC_INFO);
+    Qt5CT::unregisterStyleInstance(this);
 }
 
 int Qt5CTProxyStyle::styleHint(QStyle::StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const

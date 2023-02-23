@@ -228,8 +228,8 @@ void Qt5CTPlatformTheme::applySettings()
         qApp->setWheelScrollLines(m_wheelScrollLines);
 #endif
 
-        if(m_update && qApp->style()->objectName() == "qt5ct-style") //ignore application style
-            qApp->setStyle("qt5ct-style"); //recreate style object
+        if (m_update)
+            Qt5CT::reloadStyleInstanceSettings();
 
         if(!m_palette)
             m_palette = new QPalette(qApp->style()->standardPalette());

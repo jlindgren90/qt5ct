@@ -35,12 +35,15 @@
 #include <QtDebug>
 #include "qt5ct.h"
 
+#define EXPORT __attribute__((visibility("default")))
+
 #ifndef QT5CT_DATADIR
 #define QT5CT_DATADIR "/usr/share"
 #endif
 
+QSet<Qt5CT::StyleInstance*> Qt5CT::styleInstances;
 
-void Qt5CT::initConfig()
+EXPORT void Qt5CT::initConfig()
 {
     if(QFile::exists(configFile()))
         return;
@@ -53,17 +56,17 @@ void Qt5CT::initConfig()
     QFile::copy(globalConfig, configFile());
 }
 
-QString Qt5CT::configPath()
+EXPORT QString Qt5CT::configPath()
 {
     return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1String("/qt5ct");
 }
 
-QString Qt5CT::configFile()
+EXPORT QString Qt5CT::configFile()
 {
     return configPath() + QLatin1String("/qt5ct.conf");
 }
 
-QStringList Qt5CT::iconPaths()
+EXPORT QStringList Qt5CT::iconPaths()
 {
     QStringList paths, out;
     paths << QDir::homePath() + QLatin1String("/.icons");
@@ -83,12 +86,12 @@ QStringList Qt5CT::iconPaths()
     return out;
 }
 
-QString Qt5CT::userStyleSheetPath()
+EXPORT QString Qt5CT::userStyleSheetPath()
 {
     return configPath() + QLatin1String("/qss");
 }
 
-QStringList Qt5CT::sharedStyleSheetPaths()
+EXPORT QStringList Qt5CT::sharedStyleSheetPaths()
 {
     QStringList paths;
     for(const QString &p : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation))
@@ -100,12 +103,12 @@ QStringList Qt5CT::sharedStyleSheetPaths()
     return paths;
 }
 
-QString Qt5CT::userColorSchemePath()
+EXPORT QString Qt5CT::userColorSchemePath()
 {
     return configPath() + QLatin1String("/colors");
 }
 
-QStringList Qt5CT::sharedColorSchemePaths()
+EXPORT QStringList Qt5CT::sharedColorSchemePaths()
 {
     QStringList paths;
     for(const QString &p : QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation))
@@ -117,7 +120,7 @@ QStringList Qt5CT::sharedColorSchemePaths()
     return paths;
 }
 
-QString Qt5CT::systemLanguageID()
+EXPORT QString Qt5CT::systemLanguageID()
 {
 #ifdef Q_OS_UNIX
     QByteArray v = qgetenv ("LC_ALL");
@@ -131,7 +134,7 @@ QString Qt5CT::systemLanguageID()
     return  QLocale::system().name();
 }
 
-QString Qt5CT::resolvePath(const QString &path)
+EXPORT QString Qt5CT::resolvePath(const QString &path)
 {
     QString tmp = path;
     tmp.replace("~", QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
@@ -150,4 +153,20 @@ QString Qt5CT::resolvePath(const QString &path)
     }
 
     return tmp;
+}
+
+EXPORT void Qt5CT::registerStyleInstance(Qt5CT::StyleInstance *instance)
+{
+    styleInstances.insert(instance);
+}
+
+EXPORT void Qt5CT::unregisterStyleInstance(Qt5CT::StyleInstance *instance)
+{
+    styleInstances.remove(instance);
+}
+
+EXPORT void Qt5CT::reloadStyleInstanceSettings()
+{
+    for(auto instance : styleInstances)
+        instance->reloadSettings();
 }
