@@ -30,7 +30,7 @@
 #define QT5CTPROXYSTYLE_H
 
 #include <QProxyStyle>
-#include <qt5ct/qt5ct.h>
+#include "qt5ct.h"
 
 class Qt5CTProxyStyle : public QProxyStyle, public Qt5CT::StyleInstance
 {

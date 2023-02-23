@@ -46,7 +46,7 @@
 #include <QFile>
 #include <QFileSystemWatcher>
 
-#include <qt5ct/qt5ct.h>
+#include "qt5ct.h"
 #include "qt5ctplatformtheme.h"
 #ifdef GLOBAL_MENU
 #include <private/qdbusmenubar_p.h>

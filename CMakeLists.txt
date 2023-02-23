@@ -50,9 +50,11 @@ message(STATUS "Plugin path: " ${PLUGINDIR})
 message(STATUS "Generating translations ...")
 execute_process(COMMAND find ${CMAKE_CURRENT_SOURCE_DIR} -name *.ts COMMAND xargs ${QT_LRELEASE_EXECUTABLE} -silent)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/qt5ct-common)
+
 add_link_options(-Wl,--no-undefined)
-add_subdirectory(src/qt5ct)
 add_subdirectory(src/qt5ct-common)
+add_subdirectory(src/qt5ct)
 add_subdirectory(src/qt5ct-qtplugin)
 add_subdirectory(src/qt5ct-style)
 
