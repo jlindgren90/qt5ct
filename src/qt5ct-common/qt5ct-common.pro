@@ -6,7 +6,7 @@ QT -= gui
 
 # Input
 
-CONFIG += staticlib
+CONFIG += staticlib hide_symbols
 
 HEADERS += \
     qt5ct.h
