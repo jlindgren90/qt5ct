@@ -14,13 +14,13 @@ INSTALLS += target
 INCLUDEPATH += ../
 
 HEADERS += \
-    qt5ctproxystyle.h \
-    ../qt5ct/qt5ct.h
+    qt5ctproxystyle.h
 
 SOURCES += \
     plugin.cpp \
-    qt5ctproxystyle.cpp \
-    ../qt5ct/qt5ct.cpp
+    qt5ctproxystyle.cpp
 
 OTHER_FILES += \
     qt5ct.json
+
+LIBS += ../qt5ct-common/libqt5ct-common.a

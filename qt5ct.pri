@@ -11,6 +11,8 @@ CONFIG += c++11
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
+INCLUDEPATH += ../qt5ct-common
+
 !isEqual (QT_MAJOR_VERSION, 5) {
   error("Use Qt 5.4.0 or higher.")
 }

@@ -14,7 +14,6 @@ SOURCES += \
     tabpage.cpp \
     appearancepage.cpp \
     fontspage.cpp \
-    qt5ct.cpp \
     paletteeditdialog.cpp \
     iconthemepage.cpp \
     interfacepage.cpp \
@@ -41,7 +40,6 @@ HEADERS += \
     tabpage.h \
     appearancepage.h \
     fontspage.h \
-    qt5ct.h \
     paletteeditdialog.h \
     iconthemepage.h \
     interfacepage.h \
@@ -55,6 +53,8 @@ HEADERS += \
 }
 
 RESOURCES = translations/translations.qrc
+
+LIBS += ../qt5ct-common/libqt5ct-common.a
 
 target.path = $$BINDIR
 

@@ -20,8 +20,7 @@ QT += gui-private
 
 SOURCES += \
     main.cpp \
-    qt5ctplatformtheme.cpp \
-    ../qt5ct/qt5ct.cpp
+    qt5ctplatformtheme.cpp
 
 !equals(DISABLE_WIDGETS,1) {
    QT += widgets
@@ -32,8 +31,9 @@ OTHER_FILES += qt5ct.json
 INCLUDEPATH += ../
 
 HEADERS += \
-    qt5ctplatformtheme.h \
-    ../qt5ct/qt5ct.h
+    qt5ctplatformtheme.h
+
+LIBS += ../qt5ct-common/libqt5ct-common.a
 
 target.path = $$PLUGINDIR/platformthemes
 INSTALLS += target
