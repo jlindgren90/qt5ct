@@ -165,6 +165,6 @@ void Qt5CT::unregisterStyleInstance(Qt5CT::StyleInstance *instance)
 
 void Qt5CT::reloadStyleInstanceSettings()
 {
-    for(auto instance : styleInstances)
+    for(auto instance : qAsConst(styleInstances))
         instance->reloadSettings();
 }
