@@ -368,6 +368,7 @@ Version 1.6
 * improved warning about incorrect environment variable
 * improved icon loader
 * only prepend our stylesheet if it has changed (Carlo Teubner)
+* changed minimal required Qt version from 5.4 to 5.9
 * fixed compatibility with applications that use own stylesheet (John Lindgren)
 * fixed some clazy and clang-tidy warnings
 * changed font configuration format
