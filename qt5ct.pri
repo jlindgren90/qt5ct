@@ -12,6 +12,9 @@ CONFIG += c++11 hide_symbols
 DEFINES += QT_DEPRECATED_WARNINGS
 
 INCLUDEPATH += ../qt5ct-common
+QMAKE_LIBDIR += ../qt5ct-common
+LIBS += -lqt5ct-common
+
 
 !isEqual (QT_MAJOR_VERSION, 5) {
   error("Use Qt 5.9.0 or higher.")

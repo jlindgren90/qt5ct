@@ -8,7 +8,6 @@ ln -s "../../qt5ct-style/libqt5ct-style.so" "${MYDIR}/src/qt5ct/styles/"
 export QT_LOGGING_RULES="qt5ct.debug=true"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORM_PLUGIN_PATH=${MYDIR}/src/qt5ct-qtplugin
-#~/projects/keepassxc/src/keepassxc
+export LD_LIBRARY_PATH=${MYDIR}/src/qt5ct-common:${LD_LIBRARY_PATH}
 ${MYDIR}/src/qt5ct/qt5ct
-#/opt/qt515/bin/assistant
 rm -rf ${MYDIR}/src/qt5ct/styles/

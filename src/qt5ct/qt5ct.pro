@@ -54,8 +54,6 @@ HEADERS += \
 
 RESOURCES = translations/translations.qrc
 
-LIBS += ../qt5ct-common/libqt5ct-common.a
-
 target.path = $$BINDIR
 
 desktop.files = qt5ct.desktop

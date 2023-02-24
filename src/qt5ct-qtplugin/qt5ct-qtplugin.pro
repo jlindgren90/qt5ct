@@ -33,7 +33,5 @@ INCLUDEPATH += ../
 HEADERS += \
     qt5ctplatformtheme.h
 
-LIBS += ../qt5ct-common/libqt5ct-common.a
-
 target.path = $$PLUGINDIR/platformthemes
 INSTALLS += target

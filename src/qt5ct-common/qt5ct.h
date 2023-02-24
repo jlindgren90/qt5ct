@@ -42,7 +42,14 @@
 #include <QString>
 #include <QStringList>
 
-class Qt5CT
+#ifdef QT5CT_LIBRARY
+#define QT5CT_EXPORT Q_DECL_EXPORT
+#else
+#define QT5CT_EXPORT Q_DECL_IMPORT
+#endif
+
+
+class QT5CT_EXPORT Qt5CT
 {
 public:
     class StyleInstance
