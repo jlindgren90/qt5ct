@@ -161,7 +161,7 @@ QTreeWidgetItem *IconThemePage::loadTheme(const QString &path)
     QString comment = config.value(QString("Comment[%1]").arg(lang)).toString();
 
     if(lang.contains("_"))
-        lang = lang.split("_").first();
+        lang = lang.split("_").constFirst();
 
     if(name.isEmpty())
         name = config.value(QString("Name[%1]").arg(lang)).toString();
@@ -227,7 +227,7 @@ QIcon IconThemePage::findIconHelper(const QString &themePath, int size, const QS
             iconDir.setFilter(QDir::Files);
             iconDir.setNameFilters(QStringList () << name + "-*.*");
             if(!iconDir.entryInfoList().isEmpty())
-                p = iconDir.entryInfoList().first().absoluteFilePath();
+                p = iconDir.entryInfoList().constFirst().absoluteFilePath();
         }
 
         if(p.isEmpty())

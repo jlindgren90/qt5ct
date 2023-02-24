@@ -8,9 +8,9 @@ Official home page: https://sourceforge.net/projects/qt5ct/
 Requirements:
 
 - GNU Linux or FreeBSD
-- qtbase >= 5.4.0
-- qtsvg >= 5.4.0 (Runtime dependency for the SVG icon support)
-- qttools >= 5.4.0 (For build only)
+- qtbase >= 5.9.0
+- qtsvg >= 5.9.0 (Runtime dependency for the SVG icon support)
+- qttools >= 5.9.0 (For build only)
 
 
 Installation using qmake:
