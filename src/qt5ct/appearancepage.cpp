@@ -34,10 +34,8 @@
 #include <QMessageBox>
 #include <QMenu>
 #include <QIcon>
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QStringList>
 #include <qpa/qplatformthemefactory_p.h>
-#endif
 #include "qt5ct.h"
 #include "appearancepage.h"
 #include "paletteeditdialog.h"
@@ -80,10 +78,6 @@ AppearancePage::AppearancePage(QWidget *parent) :
     m_removeColorSchemeAction->setIcon(QIcon::fromTheme("list-remove"));
     connect(menu, SIGNAL(aboutToShow()), SLOT(updateActions()));
 
-#if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
-    m_ui->dialogLabel->hide();
-    m_ui->dialogComboBox->hide();
-#else
     keys = QPlatformThemeFactory::keys();
     m_ui->dialogComboBox->addItem(tr("Default"), "default");
     if(keys.contains("gtk2") || keys.contains("qt5gtk2"))
@@ -94,7 +88,6 @@ AppearancePage::AppearancePage(QWidget *parent) :
         m_ui->dialogComboBox->addItem("KDE", "kde");
     if (keys.contains("xdgdesktopportal"))
         m_ui->dialogComboBox->addItem("XDG Desktop Portal", "xdgdesktopportal");
-#endif
 
     readSettings();
 }
@@ -113,9 +106,7 @@ void AppearancePage::writeSettings()
     settings.setValue("style", m_ui->styleComboBox->currentText());
     settings.setValue("custom_palette", m_ui->customPaletteButton->isChecked());
     settings.setValue("color_scheme_path", m_ui->colorSchemeComboBox->currentData().toString());
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     settings.setValue("standard_dialogs", m_ui->dialogComboBox->currentData().toString());
-#endif
     settings.endGroup();
 }
 
@@ -354,11 +345,8 @@ void AppearancePage::readSettings()
 
     on_styleComboBox_activated(m_ui->styleComboBox->currentText());
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     int index = m_ui->dialogComboBox->findData(settings.value("standard_dialogs").toString());
     m_ui->dialogComboBox->setCurrentIndex(qMax(index, 0));
-#endif
-
     settings.endGroup();
 }
 

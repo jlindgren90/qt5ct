@@ -38,9 +38,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
     QGuiApplication::setDesktopFileName("qt5ct.desktop");
-#endif
     QTranslator translator;
     QString locale = Qt5CT::systemLanguageID();
     translator.load(QString(":/qt5ct_") + locale);

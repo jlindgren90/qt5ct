@@ -40,13 +40,11 @@
 
 #if !defined(QT_NO_DBUS) && defined(QT_DBUS_LIB)
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)) && !defined(QT_NO_SYSTEMTRAYICON)
+#if !defined(QT_NO_SYSTEMTRAYICON)
 #define DBUS_TRAY
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
 #define GLOBAL_MENU
-#endif
 
 #endif
 
@@ -74,10 +72,8 @@ public:
     virtual QPlatformMenuBar* createPlatformMenuBar() const override;
 #endif
     //virtual void showPlatformMenuBar() {}
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     virtual bool usePlatformNativeDialog(DialogType type) const override;
     virtual QPlatformDialogHelper *createPlatformDialogHelper(DialogType type) const override;
-#endif
 #ifdef DBUS_TRAY
     virtual QPlatformSystemTrayIcon *createPlatformSystemTrayIcon() const override;
 #endif
@@ -116,9 +112,7 @@ private:
     int m_cursorFlashTime;
     int m_uiEffects;
     int m_buttonBoxLayout;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     int m_keyboardScheme;
-#endif
     bool m_update = false;
     bool m_usePalette = true;
     int m_toolButtonStyle = Qt::ToolButtonFollowStyle;
@@ -134,10 +128,7 @@ private:
     mutable bool m_checkDBusTray = true;
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     QScopedPointer<QPlatformTheme> m_theme;
-#endif
-
 };
 
 Q_DECLARE_LOGGING_CATEGORY(lqt5ct)

@@ -55,10 +55,8 @@
 #include <private/qdbustrayicon_p.h>
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <QStringList>
 #include <qpa/qplatformthemefactory_p.h>
-#endif
 
 Q_LOGGING_CATEGORY(lqt5ct, "qt5ct", QtWarningMsg)
 
@@ -102,7 +100,6 @@ QPlatformMenuBar *Qt5CTPlatformTheme::createPlatformMenuBar() const
 }
 #endif
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 bool Qt5CTPlatformTheme::usePlatformNativeDialog(DialogType type) const
 {
     return m_theme ? m_theme->usePlatformNativeDialog(type) :
@@ -114,7 +111,6 @@ QPlatformDialogHelper *Qt5CTPlatformTheme::createPlatformDialogHelper(DialogType
     return m_theme ? m_theme->createPlatformDialogHelper(type) :
                      QPlatformTheme::createPlatformDialogHelper(type);
 }
-#endif
 
 #ifdef DBUS_TRAY
 QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() const
@@ -163,16 +159,12 @@ QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
         return Qt5CT::iconPaths();
     case QPlatformTheme::DialogButtonBoxLayout:
         return m_buttonBoxLayout;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     case QPlatformTheme::KeyboardScheme:
         return m_keyboardScheme;
-#endif
     case QPlatformTheme::UiEffects:
         return m_uiEffects;
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     case QPlatformTheme::WheelScrollLines:
         return m_wheelScrollLines;
-#endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 10, 0))
     case QPlatformTheme::ShowShortcutsInContextMenus:
         return m_showShortcutsInContextMenus;
@@ -202,7 +194,6 @@ void Qt5CTPlatformTheme::applySettings()
         return;
     }
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     if(!m_update)
     {
         //do not override application palette
@@ -212,24 +203,19 @@ void Qt5CTPlatformTheme::applySettings()
             qCDebug(lqt5ct) << "palette support is disabled";
         }
     }
-#endif
 
 #ifdef QT_WIDGETS_LIB
     if(hasWidgets())
     {
         qApp->setFont(m_generalFont);
 
-        //Qt 5.6 or higher should be use themeHint function on application startup.
-        //So, there is no need to call this function first time.
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
         if(m_update)
+        {
+            //Qt 5.6 or higher should be use themeHint function on application startup.
+            //So, there is no need to call this function first time.
             qApp->setWheelScrollLines(m_wheelScrollLines);
-#else
-        qApp->setWheelScrollLines(m_wheelScrollLines);
-#endif
-
-        if (m_update)
             Qt5CT::reloadStyleInstanceSettings();
+        }
 
         if(!m_palette)
             m_palette = new QPalette(qApp->style()->standardPalette());
@@ -317,7 +303,6 @@ void Qt5CTPlatformTheme::readSettings()
     }
     m_iconTheme = settings.value("icon_theme").toString();
     //load dialogs
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     if(!m_update)
     {
         //do not mix gtk2 style and gtk3 dialogs
@@ -335,7 +320,6 @@ void Qt5CTPlatformTheme::readSettings()
         else if(name == QLatin1String("gtk3") && keys.contains("qt5gtk3"))
             m_theme.reset(QPlatformThemeFactory::create("qt5gtk3"));
     }
-#endif
 
     settings.endGroup();
 
@@ -354,10 +338,8 @@ void Qt5CTPlatformTheme::readSettings()
     m_showShortcutsInContextMenus = settings.value("show_shortcuts_in_context_menus", true).toBool();
     m_buttonBoxLayout = QPlatformTheme::themeHint(QPlatformTheme::DialogButtonBoxLayout).toInt();
     m_buttonBoxLayout = settings.value("buttonbox_layout", m_buttonBoxLayout).toInt();
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     m_keyboardScheme = QPlatformTheme::themeHint(QPlatformTheme::KeyboardScheme).toInt();
     m_keyboardScheme = settings.value("keyboard_scheme", m_keyboardScheme).toInt();
-#endif
     QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, !settings.value("menus_have_icons", true).toBool());
     m_toolButtonStyle = settings.value("toolbutton_style", Qt::ToolButtonFollowStyle).toInt();
     m_wheelScrollLines = settings.value("wheel_scroll_lines", 3).toInt();

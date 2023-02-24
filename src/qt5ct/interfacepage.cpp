@@ -29,9 +29,7 @@
 #include <QSettings>
 #include <QApplication>
 #include <QDialogButtonBox>
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
 #include <qpa/qplatformtheme.h>
-#endif
 #include "qt5ct.h"
 #include "interfacepage.h"
 #include "ui_interfacepage.h"
@@ -47,16 +45,12 @@ InterfacePage::InterfacePage(QWidget *parent) :
     m_ui->buttonLayoutComboBox->addItem("KDE", QDialogButtonBox::KdeLayout);
     m_ui->buttonLayoutComboBox->addItem("GNOME", QDialogButtonBox::GnomeLayout);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     m_ui->keyboardSchemeComboBox->addItem("Windows", QPlatformTheme::WindowsKeyboardScheme);
     m_ui->keyboardSchemeComboBox->addItem("Mac OS X", QPlatformTheme::MacKeyboardScheme);
     m_ui->keyboardSchemeComboBox->addItem("X11", QPlatformTheme::X11KeyboardScheme);
     m_ui->keyboardSchemeComboBox->addItem("KDE", QPlatformTheme::KdeKeyboardScheme);
     m_ui->keyboardSchemeComboBox->addItem("GNOME", QPlatformTheme::GnomeKeyboardScheme);
     m_ui->keyboardSchemeComboBox->addItem("CDE", QPlatformTheme::CdeKeyboardScheme);
-#else
-    m_ui->keyboardSchemeComboBox->setVisible(false);
-#endif
 
     m_ui->toolButtonStyleComboBox->addItem(tr("Only display the icon"), Qt::ToolButtonIconOnly);
     m_ui->toolButtonStyleComboBox->addItem(tr("Only display the text"), Qt::ToolButtonTextOnly);
@@ -79,9 +73,7 @@ void InterfacePage::writeSettings()
     settings.setValue("double_click_interval", m_ui->doubleClickIntervalSpinBox->value());
     settings.setValue("cursor_flash_time", m_ui->cursorFlashTimeSpinBox->value());
     settings.setValue("buttonbox_layout", m_ui->buttonLayoutComboBox->currentData());
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     settings.setValue("keyboard_scheme", m_ui->keyboardSchemeComboBox->currentData());
-#endif
     settings.setValue("menus_have_icons", m_ui->menuIconsCheckBox->isChecked());
     settings.setValue("show_shortcuts_in_context_menus", m_ui->showShortcutsInMenusCheckBox->isChecked());
 
@@ -129,12 +121,10 @@ void InterfacePage::readSettings()
     if(index >= 0)
         m_ui->buttonLayoutComboBox->setCurrentIndex(index);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 9, 0))
     int scheme = settings.value("keyboard_scheme", QPlatformTheme::X11KeyboardScheme).toInt();
     index = m_ui->keyboardSchemeComboBox->findData(scheme);
     if(index >= 0)
         m_ui->keyboardSchemeComboBox->setCurrentIndex(index);
-#endif
 
     if(qApp->isEffectEnabled(Qt::UI_AnimateMenu))
         m_ui->menuEffectComboBox->setCurrentIndex(1);
@@ -158,9 +148,6 @@ void InterfacePage::readSettings()
 
     m_ui->menuIconsCheckBox->setChecked(!qApp->testAttribute(Qt::AA_DontShowIconsInMenus));
     m_ui->showShortcutsInMenusCheckBox->setChecked(settings.value("show_shortcuts_in_context_menus", true).toBool());
-#if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
-    m_ui->showShortcutsInMenusCheckBox->setVisible(false);
-#endif
 
     int toolbarStyle = settings.value("toolbutton_style", Qt::ToolButtonFollowStyle).toInt();
     index = m_ui->toolButtonStyleComboBox->findData(toolbarStyle);
