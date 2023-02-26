@@ -26,12 +26,9 @@ LIBS += -lqt5ct-common
 
 #Install paths
 unix {
-  isEmpty(PREFIX) {
-    PREFIX = /usr
-  }
-  isEmpty(PLUGINDIR) {
-    PLUGINDIR = $$[QT_INSTALL_PLUGINS]
-  }
+  isEmpty(PREFIX): PREFIX = /usr
+  isEmpty(PLUGINDIR): PLUGINDIR = $$[QT_INSTALL_PLUGINS]
+  isEmpty(LIBDIR): LIBDIR=$$[QT_INSTALL_LIBS]
 
   BINDIR = $$PREFIX/bin
   DATADIR = $$PREFIX/share

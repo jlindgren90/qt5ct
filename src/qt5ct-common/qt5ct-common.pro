@@ -5,9 +5,10 @@ TARGET = qt5ct-common
 QT -= gui
 LIBS -= -lqt5ct-common
 
-# Input
+VER_MAJ = $$system(cat qt5ct.h | grep 'define\\ QT5CT_VERSION_MAJOR' | cut -d '\\ ' -f3)
+VER_MIN = $$system(cat qt5ct.h | grep 'define\\ QT5CT_VERSION_MINOR' | cut -d '\\ ' -f3)
 
-CONFIG += hide_symbols
+# Input
 
 DEFINES += QT5CT_LIBRARY
 
@@ -16,3 +17,5 @@ HEADERS += \
 
 SOURCES += \
     qt5ct.cpp
+
+target.path = $$LIBDIR

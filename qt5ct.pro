@@ -40,6 +40,7 @@ INSTALLS += qss colors
 
 message (PREFIX=$$PREFIX)
 message (BINDIR=$$BINDIR)
+message (LIBDIR=$$LIBDIR)
 message (DATADIR=$$DATADIR)
 message (PLUGINDIR=$$PLUGINDIR)
 equals (DISABLE_WIDGETS,1):message ("Qt Widgets are disabled!")
