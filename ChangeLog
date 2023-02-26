@@ -363,7 +363,7 @@ Version 1.5
 * fixed build regression
 
 Version 1.6
-* added xdgdesktopportal dialogs support (Marco Genasci)
+* added XDG desktop portal dialogs support (Marco Genasci)
 * added qt6ct compatibility
 * improved warning about incorrect environment variable
 * improved icon loader
