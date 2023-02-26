@@ -19,7 +19,7 @@ qmake PREFIX=<your installation path>
 make
 make install (under root)
 
-Installation using cmake (requires Qt 5.12 or later):
+Installation using cmake (requires Qt 5.15 or later):
 
 cmake -DCMAKE_INSTALL_PREFIX=<your installation path>
 make
