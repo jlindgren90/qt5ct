@@ -19,3 +19,5 @@ SOURCES += \
     qt5ct.cpp
 
 target.path = $$LIBDIR
+
+INSTALLS += target
