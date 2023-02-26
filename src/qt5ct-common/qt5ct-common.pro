@@ -3,6 +3,7 @@ include(../../qt5ct.pri)
 TEMPLATE = lib
 TARGET = qt5ct-common
 QT -= gui
+LIBS -= -lqt5ct-common
 
 # Input
 
