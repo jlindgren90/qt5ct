@@ -39,6 +39,7 @@ Extra build options (for advanced users only):
 qmake DISABLE_WIDGETS=1 - compiles platform plugin without QtWidgets (useful for QML applications only)
 qmake DISABLE_DBUS=1 - disable D-Bus support (global menu and D-Bus tray icon implementation)
 qmake PLUGINDIR=<custom path> - changes the default installation path of the plugins (libqt5ct.so and libqt5ct-style.so)
+qmake LIBDIR=<custom path> - changes the default installation path of the qt5ct shared library (libqt5ct-common.so)
 
 Wayland:
 
@@ -62,6 +63,7 @@ Files and Directories:
 qt5ct - Qt5 configuration tool
 libqt5ct.so - qt5ct platform plugin
 libqt5ct-style.so - qt5ct proxy style plugin
+libqt5ct-common.so - qt5ct shared library
 ~/.config/qt5ct/qt5ct.conf - configuration file
 ~/.config/qt5ct/qss, ~/.local/share/qt5ct/qss, /usr/share/qt5ct/qss, /usr/local/share/qt5ct/qss - style sheets
 ~/.config/qt5ct/colors,~/.local/share/qt5ct/colors, /usr/share/qt5ct/colors,
