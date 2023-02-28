@@ -383,3 +383,8 @@ Version 1.6
 * updated Russian translation (Ilya Kotov)
 * updated Spanish translation (Toni Estévez)
 * updated Ukrainian translation (Denys Nykula)
+
+Version 1.7
+* added keywords entry to desktop file (Mateusz Łukasik)
+* changed minimal Qt version to 5.15 for cmake build system
+* fixed qmake build
