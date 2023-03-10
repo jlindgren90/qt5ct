@@ -125,7 +125,7 @@ void AppearancePage::on_styleComboBox_activated(const QString &text)
 
 void AppearancePage::on_colorSchemeComboBox_activated(int)
 {
-    m_customPalette = loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString());
+    m_customPalette = Qt5CT::loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString());
     updatePalette();
 }
 
@@ -340,7 +340,7 @@ void AppearancePage::readSettings()
         int index = m_ui->colorSchemeComboBox->findData(colorSchemePath);
         if(index >= 0)
             m_ui->colorSchemeComboBox->setCurrentIndex(index);
-        m_customPalette = loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString());
+        m_customPalette = Qt5CT::loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString());
     }
 
     on_styleComboBox_activated(m_ui->styleComboBox->currentText());
@@ -390,56 +390,6 @@ void AppearancePage::findColorSchemes(const QStringList &paths)
 {
     for(const QString &p : paths)
         findColorSchemes(p);
-}
-
-QPalette AppearancePage::loadColorScheme(const QString &filePath)
-{
-    QPalette customPalette;
-    QSettings settings(filePath, QSettings::IniFormat);
-    settings.beginGroup("ColorScheme");
-    QStringList activeColors = settings.value("active_colors").toStringList();
-    QStringList inactiveColors = settings.value("inactive_colors").toStringList();
-    QStringList disabledColors = settings.value("disabled_colors").toStringList();
-    settings.endGroup();
-
-    if(activeColors.count() == QPalette::NColorRoles &&
-            inactiveColors.count() == QPalette::NColorRoles &&
-            disabledColors.count() == QPalette::NColorRoles)
-    {
-        for (int i = 0; i < QPalette::NColorRoles; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-    }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-    else if(activeColors.count() == QPalette::NColorRoles - 1 &&
-            inactiveColors.count() == QPalette::NColorRoles - 1 &&
-            disabledColors.count() == QPalette::NColorRoles - 1)
-    {
-        //old format compatibility
-        for (int i = 0; i < QPalette::NColorRoles - 1; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-        QColor textColor = customPalette.text().color();
-        textColor.setAlpha(128);
-        customPalette.setColor(QPalette::Active, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Inactive, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Disabled, QPalette::PlaceholderText, textColor);
-    }
-#endif
-    else
-    {
-        customPalette = palette(); //load fallback palette
-    }
-
-    return customPalette;
 }
 
 void AppearancePage::createColorScheme(const QString &name, const QPalette &palette)

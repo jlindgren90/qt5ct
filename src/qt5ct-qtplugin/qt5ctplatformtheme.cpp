@@ -81,11 +81,6 @@ Qt5CTPlatformTheme::Qt5CTPlatformTheme()
 #endif
 }
 
-Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
-{
-    delete m_palette;
-}
-
 #ifdef GLOBAL_MENU
 QPlatformMenuBar *Qt5CTPlatformTheme::createPlatformMenuBar() const
 {
@@ -128,7 +123,9 @@ QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() cons
 
 const QPalette *Qt5CTPlatformTheme::palette(QPlatformTheme::Palette type) const
 {
-    return (m_usePalette && m_palette) ? m_palette : QPlatformTheme::palette(type);
+    if (type == QPlatformTheme::SystemPalette && !m_isIgnored)
+        return &m_palette;
+    return nullptr;
 }
 
 const QFont *Qt5CTPlatformTheme::font(QPlatformTheme::Font type) const
@@ -189,19 +186,8 @@ void Qt5CTPlatformTheme::applySettings()
 {
     if(!QGuiApplication::desktopSettingsAware() || m_isIgnored)
     {
-        m_usePalette = false;
         m_update = true;
         return;
-    }
-
-    if(!m_update)
-    {
-        //do not override application palette
-        if(QCoreApplication::testAttribute(Qt::AA_SetPalette))
-        {
-            m_usePalette = false;
-            qCDebug(lqt5ct) << "palette support is disabled";
-        }
     }
 
 #ifdef QT_WIDGETS_LIB
@@ -216,12 +202,6 @@ void Qt5CTPlatformTheme::applySettings()
             qApp->setWheelScrollLines(m_wheelScrollLines);
             Qt5CT::reloadStyleInstanceSettings();
         }
-
-        if(!m_palette)
-            m_palette = new QPalette(qApp->style()->standardPalette());
-
-        if(m_update && m_usePalette)
-            qApp->setPalette(*m_palette);
 
         if (m_userStyleSheet != m_prevStyleSheet) {
             // prepend our stylesheet to that of the application
@@ -240,15 +220,12 @@ void Qt5CTPlatformTheme::applySettings()
 #endif
     QGuiApplication::setFont(m_generalFont); //apply font
     if(m_update)
+    {
+        QGuiApplication::setPalette(QGuiApplication::palette()); //apply palette
         QIconLoader::instance()->updateSystemTheme(); //apply icons
-
-    if(m_palette && m_usePalette)
-        QGuiApplication::setPalette(*m_palette); //apply palette
+    }
 
 #ifdef QT_WIDGETS_LIB
-    if(m_palette && m_usePalette && !m_update)
-        qApp->setPalette(*m_palette);
-
     if(hasWidgets())
     {
         for(QWidget *w : qApp->allWidgets())
@@ -285,22 +262,19 @@ void Qt5CTPlatformTheme::updateSettings()
 
 void Qt5CTPlatformTheme::readSettings()
 {
-    if(m_palette)
-    {
-        delete m_palette;
-        m_palette = nullptr;
-    }
-
     QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
 
     settings.beginGroup("Appearance");
     m_style = settings.value("style", "Fusion").toString();
+
     QString schemePath = settings.value("color_scheme_path").toString();
-    if(!schemePath.isEmpty() && settings.value("custom_palette", false).toBool())
-    {
+    if(!schemePath.isEmpty() && settings.value("custom_palette", false).toBool()) {
         schemePath = Qt5CT::resolvePath(schemePath); //replace environment variables
-        m_palette = new QPalette(loadColorScheme(schemePath));
+        m_palette = Qt5CT::loadColorScheme(schemePath);
+    } else {
+        m_palette = QPalette();
     }
+
     m_iconTheme = settings.value("icon_theme").toString();
     //load dialogs
     if(!m_update)
@@ -383,8 +357,6 @@ void Qt5CTPlatformTheme::readSettings()
             QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets, true);
         else if(!m_isIgnored && forceRasterWidgets == Qt::Unchecked)
             QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets, false);
-        if(m_isIgnored)
-            m_usePalette = false;
         settings.endGroup();
     }
 }
@@ -413,54 +385,4 @@ QString Qt5CTPlatformTheme::loadStyleSheets(const QStringList &paths)
     static const QRegularExpression regExp("//.*\n");
     content.replace(regExp, "\n");
     return content;
-}
-
-QPalette Qt5CTPlatformTheme::loadColorScheme(const QString &filePath)
-{
-    QPalette customPalette;
-    QSettings settings(filePath, QSettings::IniFormat);
-    settings.beginGroup("ColorScheme");
-    QStringList activeColors = settings.value("active_colors").toStringList();
-    QStringList inactiveColors = settings.value("inactive_colors").toStringList();
-    QStringList disabledColors = settings.value("disabled_colors").toStringList();
-    settings.endGroup();
-
-    if(activeColors.count() == QPalette::NColorRoles &&
-            inactiveColors.count() == QPalette::NColorRoles &&
-            disabledColors.count() == QPalette::NColorRoles)
-    {
-        for (int i = 0; i < QPalette::NColorRoles; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-    }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-    else if(activeColors.count() == QPalette::NColorRoles - 1 &&
-            inactiveColors.count() == QPalette::NColorRoles - 1 &&
-            disabledColors.count() == QPalette::NColorRoles - 1)
-    {
-        //old format compatibility
-        for (int i = 0; i < QPalette::NColorRoles - 1; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-        QColor textColor = customPalette.text().color();
-        textColor.setAlpha(128);
-        customPalette.setColor(QPalette::Active, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Inactive, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Disabled, QPalette::PlaceholderText, textColor);
-    }
-#endif
-    else
-    {
-        customPalette = *QPlatformTheme::palette(SystemPalette); //load fallback palette
-    }
-
-    return customPalette;
 }

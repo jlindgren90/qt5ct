@@ -63,9 +63,6 @@ class Qt5CTPlatformTheme : public QObject, public QPlatformTheme
 public:
     Qt5CTPlatformTheme();
 
-    virtual ~Qt5CTPlatformTheme();
-
-
     //virtual QPlatformMenuItem* createPlatformMenuItem() const;
     //virtual QPlatformMenu* createPlatformMenu() const;
 #ifdef GLOBAL_MENU
@@ -104,9 +101,8 @@ private:
     bool hasWidgets();
 #endif
     QString loadStyleSheets(const QStringList &paths);
-    QPalette loadColorScheme(const QString &filePath);
     QString m_style, m_iconTheme, m_userStyleSheet, m_prevStyleSheet;
-    QPalette *m_palette = nullptr;
+    QPalette m_palette;
     QFont m_generalFont, m_fixedFont;
     int m_doubleClickInterval;
     int m_cursorFlashTime;
@@ -114,7 +110,6 @@ private:
     int m_buttonBoxLayout;
     int m_keyboardScheme;
     bool m_update = false;
-    bool m_usePalette = true;
     int m_toolButtonStyle = Qt::ToolButtonFollowStyle;
     int m_wheelScrollLines = 3;
     bool m_showShortcutsInContextMenus = false;

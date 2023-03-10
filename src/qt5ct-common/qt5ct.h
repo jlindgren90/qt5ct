@@ -38,6 +38,7 @@
 #define QT5CT_VERSION_INT (QT5CT_VERSION_MAJOR<<8 | QT5CT_VERSION_MINOR)
 #define QT5CT_VERSION_STR QT5CT_STRINGIFY(QT5CT_VERSION_MAJOR.QT5CT_VERSION_MINOR)
 
+#include <QPalette>
 #include <QSet>
 #include <QString>
 #include <QStringList>
@@ -68,6 +69,7 @@ public:
     static QStringList sharedColorSchemePaths();
     static QString systemLanguageID();
     static QString resolvePath(const QString &path);
+    static QPalette loadColorScheme(const QString &filePath);
 
     static void registerStyleInstance(StyleInstance *instance);
     static void unregisterStyleInstance(StyleInstance *instance);
