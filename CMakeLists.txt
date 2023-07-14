@@ -22,11 +22,19 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(QT_MINIMUM_VERSION "5.15.0")
 
+option(DISABLE_DBUS "disable D-Bus support (global menu and D-Bus tray icon implementation)" OFF)
 
 ADD_DEFINITIONS(-DQT_DISABLE_DEPRECATED_BEFORE=0x050C00 -DUSE_WIDGETS)
 
-find_package(Qt5 ${QT_MINIMUM_VERSION} COMPONENTS Widgets Concurrent LinguistTools DBus ThemeSupport REQUIRED)
+find_package(Qt5 ${QT_MINIMUM_VERSION} COMPONENTS Widgets Concurrent LinguistTools REQUIRED)
 find_package(Qt5Gui ${QT_MINIMUM_VERSION} CONFIG REQUIRED Private)
+
+if(NOT DISABLE_DBUS)
+    find_package(Qt5 ${QT_MINIMUM_VERSION} COMPONENTS DBus ThemeSupport REQUIRED)
+    message(STATUS "D-Bus support: Enabled")
+else()
+    message(STATUS "D-Bus support: Disabled")
+endif()
 
 get_target_property(QT_LRELEASE_EXECUTABLE Qt5::lrelease IMPORTED_LOCATION)
 
