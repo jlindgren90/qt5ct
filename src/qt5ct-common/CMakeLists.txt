@@ -26,5 +26,5 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../)
 
 add_library(qt5ct-common SHARED ${app_SRCS})
 set_target_properties(qt5ct-common PROPERTIES VERSION ${QT5CT_VERSION})
-target_link_libraries(qt5ct-common PRIVATE Qt5::Core)
+target_link_libraries(qt5ct-common PRIVATE Qt5::Core Qt5::Gui)
 install(TARGETS qt5ct-common DESTINATION ${CMAKE_INSTALL_LIBDIR})
