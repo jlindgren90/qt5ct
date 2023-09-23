@@ -299,7 +299,7 @@ void Qt5CTPlatformTheme::readSettings()
     if(!schemePath.isEmpty() && settings.value("custom_palette", false).toBool())
     {
         schemePath = Qt5CT::resolvePath(schemePath); //replace environment variables
-        m_palette = new QPalette(loadColorScheme(schemePath));
+        m_palette = new QPalette(Qt5CT::loadColorScheme(schemePath, *QPlatformTheme::palette(SystemPalette)));
     }
     m_iconTheme = settings.value("icon_theme").toString();
     //load dialogs
@@ -413,54 +413,4 @@ QString Qt5CTPlatformTheme::loadStyleSheets(const QStringList &paths)
     static const QRegularExpression regExp("//.*\n");
     content.replace(regExp, "\n");
     return content;
-}
-
-QPalette Qt5CTPlatformTheme::loadColorScheme(const QString &filePath)
-{
-    QPalette customPalette;
-    QSettings settings(filePath, QSettings::IniFormat);
-    settings.beginGroup("ColorScheme");
-    QStringList activeColors = settings.value("active_colors").toStringList();
-    QStringList inactiveColors = settings.value("inactive_colors").toStringList();
-    QStringList disabledColors = settings.value("disabled_colors").toStringList();
-    settings.endGroup();
-
-    if(activeColors.count() == QPalette::NColorRoles &&
-            inactiveColors.count() == QPalette::NColorRoles &&
-            disabledColors.count() == QPalette::NColorRoles)
-    {
-        for (int i = 0; i < QPalette::NColorRoles; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-    }
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
-    else if(activeColors.count() == QPalette::NColorRoles - 1 &&
-            inactiveColors.count() == QPalette::NColorRoles - 1 &&
-            disabledColors.count() == QPalette::NColorRoles - 1)
-    {
-        //old format compatibility
-        for (int i = 0; i < QPalette::NColorRoles - 1; i++)
-        {
-            QPalette::ColorRole role = QPalette::ColorRole(i);
-            customPalette.setColor(QPalette::Active, role, QColor(activeColors.at(i)));
-            customPalette.setColor(QPalette::Inactive, role, QColor(inactiveColors.at(i)));
-            customPalette.setColor(QPalette::Disabled, role, QColor(disabledColors.at(i)));
-        }
-        QColor textColor = customPalette.text().color();
-        textColor.setAlpha(128);
-        customPalette.setColor(QPalette::Active, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Inactive, QPalette::PlaceholderText, textColor);
-        customPalette.setColor(QPalette::Disabled, QPalette::PlaceholderText, textColor);
-    }
-#endif
-    else
-    {
-        customPalette = *QPlatformTheme::palette(SystemPalette); //load fallback palette
-    }
-
-    return customPalette;
 }

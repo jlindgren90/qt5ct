@@ -104,7 +104,6 @@ private:
     bool hasWidgets();
 #endif
     QString loadStyleSheets(const QStringList &paths);
-    QPalette loadColorScheme(const QString &filePath);
     QString m_style, m_iconTheme, m_userStyleSheet, m_prevStyleSheet;
     QPalette *m_palette = nullptr;
     QFont m_generalFont, m_fixedFont;

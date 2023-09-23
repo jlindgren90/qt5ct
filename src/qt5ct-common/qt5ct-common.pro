@@ -2,7 +2,6 @@ include(../../qt5ct.pri)
 
 TEMPLATE = lib
 TARGET = qt5ct-common
-QT -= gui
 LIBS -= -lqt5ct-common
 
 VER_MAJ = $$system(cat qt5ct.h | grep 'define\\ QT5CT_VERSION_MAJOR' | cut -d '\\ ' -f3)
