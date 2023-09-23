@@ -39,14 +39,15 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QGuiApplication::setDesktopFileName("qt5ct.desktop");
+
     QTranslator translator;
-    QString locale = Qt5CT::systemLanguageID();
-    translator.load(QString(":/qt5ct_") + locale);
-    app.installTranslator(&translator);
+
+    if(translator.load(QLocale(), QStringLiteral("qt5ct"), QStringLiteral("_"), QStringLiteral(":/")))
+        QCoreApplication::installTranslator(&translator);
 
     QTranslator qt_translator;
-    qt_translator.load(QLibraryInfo::location (QLibraryInfo::TranslationsPath) + "/qtbase_" + locale);
-    app.installTranslator(&qt_translator);
+    if(qt_translator.load(QLocale(), QStringLiteral("qtbase"), QStringLiteral("_"), QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+        app.installTranslator(&qt_translator);
 
     Qt5CT::initConfig();
 
