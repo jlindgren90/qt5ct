@@ -20,6 +20,7 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_BUILD_RPATH_USE_ORIGIN ON)
 set(QT_MINIMUM_VERSION "5.15.0")
 
 option(DISABLE_DBUS "disable D-Bus support (global menu and D-Bus tray icon implementation)" OFF)
