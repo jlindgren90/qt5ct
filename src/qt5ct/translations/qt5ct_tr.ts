@@ -35,7 +35,7 @@
     </message>
     <message>
         <location filename="../appearancepage.ui" line="124"/>
-        <location filename="../appearancepage.cpp" line="88"/>
+        <location filename="../appearancepage.cpp" line="82"/>
         <source>Default</source>
         <translation>Varsayılan</translation>
     </message>
@@ -60,90 +60,90 @@
         <translation>Standart iletişimler:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="71"/>
+        <location filename="../appearancepage.cpp" line="69"/>
         <source>Create</source>
         <translation>Oluştur</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="72"/>
+        <location filename="../appearancepage.cpp" line="70"/>
         <source>Edit</source>
         <translation>Düzenle</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="73"/>
+        <location filename="../appearancepage.cpp" line="71"/>
         <source>Create a Copy</source>
         <translation>Bir kopya oluştur</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="74"/>
+        <location filename="../appearancepage.cpp" line="72"/>
         <source>Rename</source>
         <translation>Yeniden adlandır</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="76"/>
+        <location filename="../appearancepage.cpp" line="74"/>
         <source>Remove</source>
         <translation>Kaldır</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="134"/>
+        <location filename="../appearancepage.cpp" line="208"/>
+        <location filename="../appearancepage.cpp" line="247"/>
         <source>Enter Color Scheme Name</source>
         <translation>Renk Şeması Adını Girin</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="217"/>
-        <location filename="../appearancepage.cpp" line="256"/>
+        <location filename="../appearancepage.cpp" line="134"/>
+        <location filename="../appearancepage.cpp" line="208"/>
+        <location filename="../appearancepage.cpp" line="247"/>
         <source>File name:</source>
         <translation>Dosya adı:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="236"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="227"/>
+        <location filename="../appearancepage.cpp" line="257"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="152"/>
-        <location filename="../appearancepage.cpp" line="228"/>
-        <location filename="../appearancepage.cpp" line="266"/>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="257"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>&quot;%1&quot; renk şeması zaten var</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="161"/>
+        <location filename="../appearancepage.cpp" line="184"/>
+        <location filename="../appearancepage.cpp" line="242"/>
         <source>Warning</source>
         <translation>Uyarı</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
-        <location filename="../appearancepage.cpp" line="193"/>
-        <location filename="../appearancepage.cpp" line="251"/>
+        <location filename="../appearancepage.cpp" line="161"/>
+        <location filename="../appearancepage.cpp" line="184"/>
+        <location filename="../appearancepage.cpp" line="242"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>&quot;%1&quot; renk şeması yalnızca okunur</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="198"/>
+        <location filename="../appearancepage.cpp" line="189"/>
         <source>Confirm Remove</source>
         <translation>Kaldırmayı Onayla</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="199"/>
+        <location filename="../appearancepage.cpp" line="190"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>&quot;%1&quot; renk şemasını kaldırmak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="210"/>
         <source>%1 (copy)</source>
         <translation>%1 (kopya)</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="236"/>
+        <location filename="../appearancepage.cpp" line="227"/>
         <source>Unable to copy file</source>
         <translation>Dosya kopyalanamıyor</translation>
     </message>
@@ -380,27 +380,27 @@
         <translation>Bağlam menülerinde kısayolları göster</translation>
     </message>
     <message>
-        <location filename="../interfacepage.cpp" line="61"/>
+        <location filename="../interfacepage.cpp" line="55"/>
         <source>Only display the icon</source>
         <translation>Sadece simgeyi göster</translation>
     </message>
     <message>
-        <location filename="../interfacepage.cpp" line="62"/>
+        <location filename="../interfacepage.cpp" line="56"/>
         <source>Only display the text</source>
         <translation>Sadece metni göster</translation>
     </message>
     <message>
-        <location filename="../interfacepage.cpp" line="63"/>
+        <location filename="../interfacepage.cpp" line="57"/>
         <source>The text appears beside the icon</source>
         <translation>Metin simgenin yanında görünür</translation>
     </message>
     <message>
-        <location filename="../interfacepage.cpp" line="64"/>
+        <location filename="../interfacepage.cpp" line="58"/>
         <source>The text appears under the icon</source>
         <translation>Metin simgenin altında görünür</translation>
     </message>
     <message>
-        <location filename="../interfacepage.cpp" line="65"/>
+        <location filename="../interfacepage.cpp" line="59"/>
         <source>Follow the application style</source>
         <translation>Uygulama tarzını takip et</translation>
     </message>
@@ -455,7 +455,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="57"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorun Giderme</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="64"/>
@@ -475,12 +475,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="124"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set (required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation> &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; ortam değişkeni ayarlı değil (gerekli değerler: &lt;b&gt;qt5ct&lt;/b&gt; veya &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="129"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly (current value: &lt;b&gt;%1&lt;/b&gt;, required values: &lt;b&gt;qt5ct&lt;/b&gt; or &lt;b&gt;qt6ct&lt;/b&gt;).</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; ortam değişkeni doğru ayarlanmamış (mevcut değer: &lt;b&gt;%1&lt;/b&gt;, gerekli değerler: &lt;b&gt;qt5ct&lt;/b&gt; veya &lt;b&gt;qt6ct&lt;/b&gt;).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="136"/>
@@ -791,12 +791,12 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="20"/>
         <source>Ignored applications:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yoksayılan uygulamalar:</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="29"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle...</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="40"/>
@@ -806,27 +806,27 @@
     <message>
         <location filename="../troubleshootingpage.ui" line="73"/>
         <source>Do not apply any styles and color schemes for the listed applications.</source>
-        <translation type="unfinished"></translation>
+        <translation>Listelenen uygulamalar için herhangi bir tarz ve renk şeması uygulamayın.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="82"/>
         <source>Make top-level widgets use pure raster surfaces, and do not support non-native GL-based child widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>Üst düzey widget&apos;ların saf raster yüzeyler kullanmasını sağla ve yerel olmayan GL tabanlı alt widget&apos;ları destekleme.</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.ui" line="85"/>
         <source>Force raster surface</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster yüzeyini zorla</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Select Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama Seç</translation>
     </message>
     <message>
         <location filename="../troubleshootingpage.cpp" line="64"/>
         <source>Executable files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalıştırılabilir dosyalar (*)</translation>
     </message>
 </context>
 </TS>

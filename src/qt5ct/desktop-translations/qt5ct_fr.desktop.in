@@ -34,6 +34,6 @@ Categories=Settings;DesktopSettings;Qt;
 
 
 # Translations
-Comment[fr]=Un outil de configuration de Qt5
-Name[fr]=Paramètres de Qt5
+Comment[fr]=Un outil de configuration pour Qt5
+Name[fr]=Paramètres pour Qt5
 Icon[fr]=preferences-desktop-theme
