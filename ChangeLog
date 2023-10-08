@@ -388,3 +388,12 @@ Version 1.7
 * added keywords entry to desktop file (Mateusz Łukasik)
 * changed minimal Qt version to 5.15 for cmake build system
 * fixed qmake build
+
+Version 1.8
+* fixed localization support
+* improved cmake build:
+  - added feature to disable D-Bus support (Nuno Silva)
+  - enabled reproducible build by default
+* fixed parallel build using qmake
+* updated Turkish translation (Yaşar Çiv)
+* updated French translation (Wallon, David Geiger)
