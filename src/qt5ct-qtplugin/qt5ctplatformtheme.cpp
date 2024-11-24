@@ -228,6 +228,10 @@ void Qt5CTPlatformTheme::applySettings()
 #ifdef QT_WIDGETS_LIB
     if(hasWidgets())
     {
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
+        if(m_update)
+            qApp->setPalette(*palette());
+#endif
         for(QWidget *w : qApp->allWidgets())
         {
             QEvent e(QEvent::ThemeChange);
