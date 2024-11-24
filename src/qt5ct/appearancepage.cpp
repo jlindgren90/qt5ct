@@ -36,6 +36,7 @@
 #include <QIcon>
 #include <QStringList>
 #include <qpa/qplatformthemefactory_p.h>
+#include <qpa/qplatformtheme.h>
 #include "qt5ct.h"
 #include "appearancepage.h"
 #include "paletteeditdialog.h"
@@ -52,8 +53,6 @@ AppearancePage::AppearancePage(QWidget *parent) :
     m_ui->styleComboBox->addItems(keys);
 
     connect(m_ui->paletteComboBox, SIGNAL(activated(int)), SLOT(updatePalette()));
-    connect(m_ui->customPaletteButton, SIGNAL(clicked()), SLOT(updatePalette()));
-    connect(m_ui->defaultPaletteButton, SIGNAL(clicked()), SLOT(updatePalette()));
 
     m_previewWidget = new QWidget(this);
     m_previewUi = new Ui::PreviewForm();
@@ -104,8 +103,23 @@ void AppearancePage::writeSettings()
     QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
     settings.beginGroup("Appearance");
     settings.setValue("style", m_ui->styleComboBox->currentText());
-    settings.setValue("custom_palette", m_ui->customPaletteButton->isChecked());
-    settings.setValue("color_scheme_path", m_ui->colorSchemeComboBox->currentData().toString());
+
+    if(m_ui->colorSchemeComboBox->currentData().toString() == QStringLiteral("system"))
+    {
+        settings.setValue("custom_palette", false);
+    }
+    else if(m_ui->colorSchemeComboBox->currentData().toString() == QStringLiteral("style"))
+    {
+        settings.setValue("custom_palette", true);
+        settings.setValue("color_scheme_path", Qt5CT::styleColorSchemeFile());
+        createColorScheme(Qt5CT::styleColorSchemeFile(), m_previewWidget->palette());
+    }
+    else
+    {
+        settings.setValue("custom_palette", true);
+        settings.setValue("color_scheme_path", m_ui->colorSchemeComboBox->currentData().toString());
+    }
+
     settings.setValue("standard_dialogs", m_ui->dialogComboBox->currentData().toString());
     settings.endGroup();
 }
@@ -120,12 +134,30 @@ void AppearancePage::on_styleComboBox_activated(const QString &text)
     delete m_selectedStyle;
     m_selectedStyle = style;
 
+    if(m_ui->colorSchemeComboBox->currentData().toString() == QLatin1String("style"))
+        m_customPalette = m_selectedStyle->standardPalette();
+
     updatePalette();
 }
 
 void AppearancePage::on_colorSchemeComboBox_activated(int)
 {
-    m_customPalette = Qt5CT::loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString(), palette());
+    QString data = m_ui->colorSchemeComboBox->currentData().toString();
+
+    if(data == QLatin1String("system"))
+    {
+        QPlatformTheme t;
+        m_customPalette = *t.palette();
+    }
+    else if(data == QLatin1String("style"))
+    {
+        m_customPalette = m_selectedStyle->standardPalette();
+    }
+    else
+    {
+        m_customPalette = Qt5CT::loadColorScheme(data, palette());
+    }
+
     updatePalette();
 }
 
@@ -221,7 +253,7 @@ void AppearancePage::copyColorScheme()
         return;
     }
 
-    QString newPath =  Qt5CT::userColorSchemePath() + QLatin1String("/") + name;
+    QString newPath = Qt5CT::userColorSchemePath() + QLatin1String("/") + name;
     if(!QFile::copy(m_ui->colorSchemeComboBox->currentData().toString(), newPath))
     {
         QMessageBox::warning(this, tr("Error"), tr("Unable to copy file"));
@@ -259,7 +291,7 @@ void AppearancePage::renameColorScheme()
         return;
     }
 
-    QString newPath =  Qt5CT::userColorSchemePath() + QLatin1String("/") + name;
+    QString newPath = Qt5CT::userColorSchemePath() + QLatin1String("/") + name;
     QFile::rename(m_ui->colorSchemeComboBox->currentData().toString(), newPath);
     m_ui->colorSchemeComboBox->setItemText(index, name.section('.',0,0));
     m_ui->colorSchemeComboBox->setItemData(index, newPath);
@@ -270,8 +302,7 @@ void AppearancePage::updatePalette()
     if(!m_selectedStyle)
         return;
 
-    setPreviewPalette(m_ui->customPaletteButton->isChecked() ?
-                          m_customPalette : m_selectedStyle->standardPalette());
+    setPreviewPalette(m_customPalette);
 }
 
 void AppearancePage::setPreviewPalette(const QPalette &p)
@@ -323,24 +354,33 @@ void AppearancePage::readSettings()
     QString style = settings.value("style", "Fusion").toString();
     m_ui->styleComboBox->setCurrentText(style);
 
-    m_ui->customPaletteButton->setChecked(settings.value("custom_palette", false).toBool());
+    //color schemes
     QString colorSchemePath = settings.value("color_scheme_path").toString();
     colorSchemePath = Qt5CT::resolvePath(colorSchemePath); //replace environment variables
+
+    m_ui->colorSchemeComboBox->addItem(tr("Default"), "system");
+    m_ui->colorSchemeComboBox->addItem(tr("Style's colors"), "style");
+    m_ui->colorSchemeComboBox->insertSeparator(2);
 
     QDir("/").mkpath(Qt5CT::userColorSchemePath());
     findColorSchemes(Qt5CT::userColorSchemePath());
     findColorSchemes(Qt5CT::sharedColorSchemePaths());
 
-    if(m_ui->colorSchemeComboBox->count() == 0)
+    if(settings.value("custom_palette", false).toBool())
     {
-        m_customPalette = palette(); //load fallback palette
+        int index = m_ui->colorSchemeComboBox->findData(colorSchemePath);
+        if(index < 0 && colorSchemePath == Qt5CT::styleColorSchemeFile())
+            index = m_ui->colorSchemeComboBox->findData("style");
+
+        m_ui->colorSchemeComboBox->setCurrentIndex(index);
+        m_customPalette = Qt5CT::loadColorScheme(colorSchemePath, palette());
     }
     else
     {
-        int index = m_ui->colorSchemeComboBox->findData(colorSchemePath);
-        if(index >= 0)
-            m_ui->colorSchemeComboBox->setCurrentIndex(index);
-        m_customPalette = Qt5CT::loadColorScheme(m_ui->colorSchemeComboBox->currentData().toString(), palette());
+        int index = m_ui->colorSchemeComboBox->findData("system");
+        m_ui->colorSchemeComboBox->setCurrentIndex(index);
+        QPlatformTheme t;
+        m_customPalette = *t.palette();
     }
 
     on_styleComboBox_activated(m_ui->styleComboBox->currentText());

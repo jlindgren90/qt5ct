@@ -107,6 +107,11 @@ QString Qt5CT::userColorSchemePath()
     return configPath() + QLatin1String("/colors");
 }
 
+QString Qt5CT::styleColorSchemeFile()
+{
+    return configPath() + QLatin1String("/style-colors.conf");
+}
+
 QStringList Qt5CT::sharedColorSchemePaths()
 {
     QStringList paths;
