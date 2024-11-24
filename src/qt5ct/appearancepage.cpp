@@ -347,6 +347,15 @@ void AppearancePage::updateActions()
     }
 }
 
+void AppearancePage::changeEvent(QEvent *event)
+{
+    //restore preview palette after stylesheet change
+    if(event->type() == QEvent::ThemeChange)
+        updatePalette();
+
+    TabPage::changeEvent(event);
+}
+
 void AppearancePage::readSettings()
 {
     QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
