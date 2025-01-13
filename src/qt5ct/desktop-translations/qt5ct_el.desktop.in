@@ -26,14 +26,16 @@ Comment=Qt5 Configuration Tool
 
 
 
+
 Exec=qt5ct
 Icon=preferences-desktop-theme
 Terminal=false
 Type=Application
 Categories=Settings;DesktopSettings;Qt;
+Keywords=settings;desktop;qt;qtsettings;qt5;
 
 
 # Translations
-Comment[el]=Εργαλείο διαμόρφωσης της Qt5
 Name[el]=Ρυθμίσεις Qt5
+Comment[el]=Εργαλείο διαμόρφωσης της Qt5
 Icon[el]=preferences-desktop-theme

@@ -362,7 +362,7 @@
     <message>
         <location filename="../interfacepage.ui" line="256"/>
         <source>Show shortcut underlines</source>
-        <translation>Показване на подсказки за бъз достъп</translation>
+        <translation>Показване на подчертаване на преките пътища</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="266"/>

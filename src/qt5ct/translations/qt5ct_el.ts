@@ -135,7 +135,7 @@
     <message>
         <location filename="../appearancepage.cpp" line="371"/>
         <source>Style&apos;s colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Χρώματα τεχνοτροπίας</translation>
     </message>
 </context>
 <context>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../fontconfigdialog.ui" line="97"/>
         <source>Hinting style:</source>
-        <translation>Στυλ υπόδειξης:</translation>
+        <translation>Τεχνοτροπία υπόδειξης:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="42"/>
