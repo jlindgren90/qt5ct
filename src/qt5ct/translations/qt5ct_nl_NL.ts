@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="81"/>
-        <location filename="../appearancepage.cpp" line="361"/>
+        <location filename="../appearancepage.cpp" line="370"/>
         <source>Default</source>
         <translation>Standaard</translation>
     </message>
@@ -133,7 +133,7 @@
         <translation>Het bestand kan niet worden gekopieerd</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="362"/>
+        <location filename="../appearancepage.cpp" line="371"/>
         <source>Style&apos;s colors</source>
         <translation type="unfinished"></translation>
     </message>

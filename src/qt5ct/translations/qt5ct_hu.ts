@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="81"/>
-        <location filename="../appearancepage.cpp" line="361"/>
+        <location filename="../appearancepage.cpp" line="370"/>
         <source>Default</source>
         <translation>Alapértelmezett</translation>
     </message>
@@ -133,7 +133,7 @@
         <translation>Nem lehet másolni a fájlt</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="362"/>
+        <location filename="../appearancepage.cpp" line="371"/>
         <source>Style&apos;s colors</source>
         <translation type="unfinished"></translation>
     </message>
