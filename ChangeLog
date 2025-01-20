@@ -1,6 +1,16 @@
 Changelog of the Qt5 Configuration Tool
 -----------
 
+Version 1.9
+* reworked color settings
+* fixed issue with app-specific palette (John Lindgren)
+* fixed compatibility with old Qt versions
+* updated Chinese (Taiwan) translation (Jeff Huang)
+* updated Dutch translation (Heimen Stoffels)
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Polish translation (Marek Adamski)
+* updated Russian translation
+
 Version 1.8
 * fixed localization support
 * improved cmake build:
