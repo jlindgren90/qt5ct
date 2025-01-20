@@ -33,7 +33,7 @@
 Qt5CTProxyStyle::Qt5CTProxyStyle()
 {
     Qt5CT::registerStyleInstance(this);
-    reloadSettings();
+    Qt5CTProxyStyle::reloadSettings();
 }
 
 void Qt5CTProxyStyle::reloadSettings()
